@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stephenson Cardiac Imaging Centre | Advanced Cardiac MRI</title>
+  <meta name="description" content="The Stephenson Cardiac Imaging Centre (SCIC) at the University of Calgary — advancing cardiac health through world-class imaging, research, and clinical care.">
+  <link rel="icon" type="image/png" href="images/SCIC_Favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<div id="nav-holder"></div>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <!-- Animated MRI — hydrogen protons aligning with the B0 magnetic field.
+       Mimics what happens to H nuclei in the body when a patient enters the scanner. -->
+  <div class="hero-visual">
+    <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- B0 field direction axis (the static vertical magnetic field of the scanner) -->
+      <line x1="415" y1="392" x2="415" y2="16" stroke="rgba(0,171,255,0.16)" stroke-width="1" stroke-dasharray="3 7"/>
+      <polygon points="415,8 409,22 421,22" fill="rgba(0,171,255,0.24)"/>
+
+      <!-- ── Row 1 (y = 80) ── -->
+      <g class="proton-g-1">
+        <circle cx="295" cy="80" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="295" y1="80" x2="295" y2="48" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="295,40 290,52 300,52" fill="#00ABFF"/>
+        <circle cx="295" cy="80" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+      <g class="proton-g-2">
+        <circle cx="415" cy="80" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="415" y1="80" x2="415" y2="48" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="415,40 410,52 420,52" fill="#00ABFF"/>
+        <circle cx="415" cy="80" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+      <g class="proton-g-3">
+        <circle cx="535" cy="80" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="535" y1="80" x2="535" y2="48" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="535,40 530,52 540,52" fill="#00ABFF"/>
+        <circle cx="535" cy="80" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+
+      <!-- ── Row 2 (y = 200) ── -->
+      <g class="proton-g-4">
+        <circle cx="295" cy="200" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="295" y1="200" x2="295" y2="168" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="295,160 290,172 300,172" fill="#00ABFF"/>
+        <circle cx="295" cy="200" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+      <g class="proton-g-5">
+        <circle cx="415" cy="200" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="415" y1="200" x2="415" y2="168" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="415,160 410,172 420,172" fill="#00ABFF"/>
+        <circle cx="415" cy="200" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+      <g class="proton-g-6">
+        <circle cx="535" cy="200" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="535" y1="200" x2="535" y2="168" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="535,160 530,172 540,172" fill="#00ABFF"/>
+        <circle cx="535" cy="200" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+
+      <!-- ── Row 3 (y = 320) ── -->
+      <g class="proton-g-7">
+        <circle cx="295" cy="320" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="295" y1="320" x2="295" y2="288" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="295,280 290,292 300,292" fill="#00ABFF"/>
+        <circle cx="295" cy="320" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+      <g class="proton-g-8">
+        <circle cx="415" cy="320" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="415" y1="320" x2="415" y2="288" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="415,280 410,292 420,292" fill="#00ABFF"/>
+        <circle cx="415" cy="320" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+      <g class="proton-g-9">
+        <circle cx="535" cy="320" r="17" fill="rgba(0,171,255,0.07)"/>
+        <line class="spin-line" x1="535" y1="320" x2="535" y2="288" stroke="#00ABFF" stroke-width="2" stroke-linecap="round"/>
+        <polygon class="spin-tip" points="535,280 530,292 540,292" fill="#00ABFF"/>
+        <circle cx="535" cy="320" r="13" fill="rgba(100,170,225,0.58)" stroke="#00ABFF" stroke-width="1.5"/>
+      </g>
+
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="fade-in">
+        Stephenson<br>
+        <span>Cardiac Imaging Centre</span>
+      </h1>
+      <p class="fade-in">
+        Cardiac MRI performed at the intersection of the clinic, research, and patient care, right inside Calgary.
+      </p>
+      <div class="hero-actions fade-in">
+        <a href="about.html" class="btn btn-primary">
+          Discover SCIC
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-stats fade-in">
+        <div>
+          <div class="hero-stat-value">3,500+</div>
+          <div class="hero-stat-label">Scans per year</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">20+</div>
+          <div class="hero-stat-label">Years of service</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">12</div>
+          <div class="hero-stat-label">Active research projects</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">50+</div>
+          <div class="hero-stat-label">Publications</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== WHAT WE DO ====== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow">What we do</span>
+      <h2>A centre built on three pillars</h2>
+      <p class="lead"> Building on an established clinical CMR program, SCIC is developing new applications of cardiovascular MRI for preprocedural planning, real-time intervention, and advanced tissue characterization.
+
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div class="card-body">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Clinical excellence</h3>
+          <p>State-of-the-art cardiac MRI services for referring cardiologists and patients.</p>
+          <a href="clinical.html" class="card-link">Clinical services →</a>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-body">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Pioneering research</h3>
+          <p>Innovative studies in cardiac function, tissue characterization, electrophysiological assessment, and interventions.</p>
+          <a href="research.html" class="card-link">Our research →</a>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-body">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Training &amp; education</h3>
+          <p>The next generation of cardiac imagers through our acclaimed fellowship program and educational resources for the imaging community.</p>
+          <a href="education.html" class="card-link">Education →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== RESEARCH PREVIEW ====== -->
+<!-- <section class="section section--grey">
+  <div class="container">
+    <div class="section-head section-head--row fade-in">
+      <div>
+        <span class="eyebrow">Research</span>
+        <h2>Advancing the science of cardiac imaging</h2>
+      </div>
+      <a href="research.html" class="btn btn-outline">All projects →</a>
+    </div>
+
+    <div class="grid-3 fade-in" id="home-research-grid">
+      Cards loaded from data/research.json
+    </div>
+  </div>
+</section> -->
+
+
+<!-- ====== DONORS CTA ====== -->
+<section class="cta-band">
+  <div class="container text-center fade-in">
+    <span class="eyebrow">Support SCIC</span>
+    <h2>Your generosity powers tomorrow's discoveries</h2>
+    <p>Philanthropic support enables us to acquire next-generation imaging technology, fund innovative research, and train future cardiac imaging leaders.</p>
+    <a href="donors.html" class="btn btn-primary">Support SCIC</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-holder"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

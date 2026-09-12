@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Stephenson Cardiac Imaging Centre</title>
+  <link rel="icon" type="image/png" href="images/SCIC_Favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* Card visuals live in css/main.css (.research-card). Only page-local layout here. */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    @media (max-width: 900px) { .research-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 560px) { .research-grid { grid-template-columns: 1fr; } }
+
+    /* Reduce spacing after hero */
+    .page-hero + .section { padding-top: 2rem; }
+
+    /* Theme card media placeholder */
+    .theme-card-media {
+      width: 100%;
+      height: 200px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 2px dashed var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-3);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+    .theme-card-media:empty::before {
+      content: 'Image / GIF / Video';
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(10,14,20,0.6);
+      z-index: 2000;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s;
+      padding: 1.5rem;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal {
+      background: var(--white);
+      border-radius: var(--radius);
+      max-width: 620px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .modal-header {
+      padding: 1.75rem 1.75rem 1.25rem;
+      border-bottom: 3px solid var(--modal-border, var(--line));
+      position: sticky; top: 0; background: var(--white); z-index: 1;
+    }
+    .modal-header h3 { margin-top: 0.6rem; }
+    .modal-header .tag {
+      background: var(--modal-tag-bg, var(--surface));
+      color: var(--modal-tag-color, var(--ink));
+    }
+    .modal-body { padding: 1.75rem; }
+    .modal-body h4 { margin-bottom: 0.5rem; }
+    .modal-body ul { margin-top: 0.5rem; padding-left: 1.1rem; list-style: disc; }
+    .modal-body ul li { margin-bottom: 0.35rem; color: var(--ink-2); font-size: 0.95rem; }
+    .modal-close {
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      width: 30px; height: 30px; border-radius: 50%;
+      color: var(--ink-3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; cursor: pointer; transition: var(--transition);
+    }
+    .modal-close:hover { background: var(--surface); color: var(--ink); }
+
+    /* Category colour scheme */
+    :root {
+      --color-icmr: #1e40af;
+      --color-ecg: #2563eb;
+      --color-flow: #3b82f6;
+      --color-imaging: #60a5fa;
+      --color-clinical: #93c5fd;
+    }
+
+    /* Filter pills with category colors */
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .filter-pill {
+      font-family: var(--font);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      color: var(--ink-3);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-pill:hover { color: var(--ink); border-color: var(--ink-3); }
+    .filter-pill.active {
+      border-color: var(--blue);
+      color: var(--white);
+      background: var(--blue);
+    }
+
+    /* Apply category colors to research cards */
+    .research-card {
+      border-left: 4px solid var(--line);
+      transition: var(--transition);
+    }
+    .research-card[data-category="icmr"] { border-left-color: var(--color-icmr); }
+    .research-card[data-category="ecg"] { border-left-color: var(--color-ecg); }
+    .research-card[data-category="flow"] { border-left-color: var(--color-flow); }
+    .research-card[data-category="imaging"] { border-left-color: var(--color-imaging); }
+    .research-card[data-category="clinical"] { border-left-color: var(--color-clinical); }
+
+    /* Colored tag backgrounds */
+    .research-card .tag {
+      background: var(--tag-bg, var(--surface));
+      color: var(--tag-color, var(--ink));
+    }
+    .research-card[data-category="icmr"] .tag { background: var(--color-icmr); color: var(--white); }
+    .research-card[data-category="ecg"] .tag { background: var(--color-ecg); color: var(--white); }
+    .research-card[data-category="flow"] .tag { background: var(--color-flow); color: var(--white); }
+    .research-card[data-category="imaging"] .tag { background: var(--color-imaging); color: var(--white); }
+    .research-card[data-category="clinical"] .tag { background: var(--color-clinical); color: var(--white); }
+
+    /* Collaboration map */
+    #collab-map {
+      width: 100%;
+      height: 440px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    @media (max-width: 600px) { #collab-map { height: 340px; } }
+    .collab-popup { font-family: var(--font); line-height: 1.5; }
+    .collab-popup strong { font-size: 0.95rem; }
+    .collab-popup span { display: block; font-size: 0.85rem; color: var(--ink-3); }
+    .leaflet-popup-content-wrapper { border-radius: var(--radius) !important; }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+<div id="nav-holder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <span class="eyebrow">Research</span>
+    <h1>Advancing the Science of Cardiac Imaging</h1>
+  </div>
+</section>
+
+<!-- ====== RESEARCH LINES ====== -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="grid-3 fade-in">
+      <div class="theme-card">
+        <div class="theme-card-media"></div>
+        <h4>3D Tissue Characterization</h4>
+        <p>
+          Using Adas3D ad tissue characterizaiton.</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-card-media"></div>
+        <h4>4D Flow</h4>
+        <p> Using 4D phase-contrast MRI to characterize blood flow, wall shear stress, and energy loss in patients with aortic disease, valvular heart disease, and congenital conditions.</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-card-media"></div>
+        <h4>5D Cine</h4>
+        <p>5D cine imaging captures a continuous 3D volume of the beating heart over all respiratory phases,
+          reconstructed using compressed sensing and motion-resolved techniques while eliminating breath-holds entirely.</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-card-media"></div>
+        <h4>In-Bore ECG</h4>
+        <p>Acquiring electrophysiological data inside the MRI while minimizing magnetohydrodynamic effects and eliminating gradient induced voltages. </p>
+      </div>
+      <div class="theme-card theme-card--accent">
+        <div class="theme-card-media"></div>
+        <h4>Interventional CMR (iCMR)</h4>
+        <p>MRI-guided catheter procedures, ablation lesion visualization, and a full translational research programme bringing iCMR from bench to bedside.</p>
+        <a href="icmr.html" class="card-link">Learn more about iCMR &rarr;</a>
+      </div>
+      <div class="theme-card">
+        <div class="theme-card-media"></div>
+        <h4>Quantitative Perfusion</h4>
+        <p>Using cardiovascular MRI to visualize perfusion defects and characterize microvascular functioning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== INTERNATIONAL COLLABORATIONS ====== -->
+<section class="section">
+  <div class="container">
+    <div class="fade-in mb-6">
+      <span class="eyebrow">Collaborations</span>
+      <h2>(Inter)national Research Collaborations</h2>
+      <p class="lead mt-2">We work with leading cardiac imaging centres worldwide to advance the science and practice of CMR.</p>
+    </div>
+
+    <div class="fade-in">
+      <div id="collab-map"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== RESEARCH PROJECTS ====== -->
+<section class="section section--grey">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow">Research Projects</span>
+      <h2>Our programmes of discovery</h2>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-pills fade-in" id="filter-pills">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="icmr">Interventional CMR</button>
+      <button class="filter-pill" data-filter="ecg">ECG & Electrophysiology</button>
+      <button class="filter-pill" data-filter="flow">Flow & Hemodynamics</button>
+      <button class="filter-pill" data-filter="imaging">Advanced Imaging</button>
+      <button class="filter-pill" data-filter="clinical">Clinical Programmes</button>
+    </div>
+
+    <div class="research-grid fade-in" id="research-grid">
+      <!-- Cards are dynamically generated from /data/research.json -->
+    </div>
+  </div>
+</section>
+
+<!-- ====== PUBLICATIONS ====== -->
+<section class="section">
+  <div class="container">
+    <div class="fade-in mb-4">
+      <span class="eyebrow">Publications</span>
+      <h2>Selected recent publications</h2>
+    </div>
+    <div class="pub-list fade-in">
+      <div class="pub-row">
+        <div class="pub-year">2024<span>JACC:CI</span></div>
+        <div>
+          <h4>Prognostic value of ECV quantification in HCM: a multicentre registry study</h4>
+          <p class="meta">Chen L, Ahn J, Walsh T, et al. <em>JACC: Cardiovascular Imaging.</em> 2024.</p>
+        </div>
+      </div>
+      <div class="pub-row">
+        <div class="pub-year">2024<span>Circ Imaging</span></div>
+        <div>
+          <h4>Deep learning segmentation of cardiac MRI: external validation across 12 sites</h4>
+          <p class="meta">Osei P, Wei L, Chen L, et al. <em>Circulation: Cardiovascular Imaging.</em> 2024.</p>
+        </div>
+      </div>
+      <div class="pub-row">
+        <div class="pub-year">2023<span>JCMR</span></div>
+        <div>
+          <h4>4D flow MRI hemodynamic profiling in bicuspid aortic valve disease</h4>
+          <p class="meta">Ross N, Walsh T, Sinn M, et al. <em>Journal of Cardiovascular Magnetic Resonance.</em> 2023.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 fade-in">
+      <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="btn btn-outline">View All Publications on PubMed →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal template -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content">
+    <div class="modal-header" id="modal-header">
+      <div class="modal-close" onclick="closeModal(null, true)">✕</div>
+      <div id="modal-tag"></div>
+      <h3 id="modal-title"></h3>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<div id="footer-holder"></div>
+<script src="js/nav.js"></script>
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // ---- Collaboration Map ----
+  (function () {
+    const home = { lat: 51.0447, lng: -114.0719 };
+    const map = L.map('collab-map', {
+      center: [30, -20],
+      zoom: 2,
+      minZoom: 2,
+      maxZoom: 8,
+      scrollWheelZoom: true,
+      worldCopyJump: true,
+      trackResize: true,
+    });
+
+    L.tileLayer('https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_3hrf_1_0b72cb39c3bac48664d40ff1', {
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+      subdomains: 'abcd',
+    }).addTo(map);
+
+    // Custom pin icons
+    function makeIcon(color, size) {
+      return L.divIcon({
+        className: '',
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+        popupAnchor: [0, -size / 2 - 4],
+        html: '<div style="width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:var(--blue);border:2px solid white;"></div>',
+      });
+    }
+
+    var homeIcon = makeIcon('#00ABFF', 22);
+    var collabIcon = makeIcon('#005a99', 16);
+
+    // Home marker (SCIC Calgary)
+    L.marker([home.lat, home.lng], { icon: homeIcon })
+      .addTo(map)
+      .bindPopup('<div class="collab-popup"><strong>Stephenson Cardiac Imaging Centre</strong><span>Calgary, Canada — Home Base</span></div>');
+
+    // Collaborators
+    var collabs = [
+      { name: 'Sunnybrook Health Sciences Centre', role: 'research',city: 'Toronto, Canada', lat: 43.72245279459152, lng: -79.3748616708774 },
+      { name: 'McGill University',role: 'research', city: 'Montreal, Canada', lat: 45.5017, lng: -73.5673 },
+      { name: 'Imperial College London', role: 'research',city: 'London, United Kingdom', lat: 51.4988, lng: -0.1749 },
+      { name: 'CHUV \u2014 Lausanne University Hospital',role: 'research', city: 'Lausanne, Switzerland', lat: 46.5197, lng: 6.6323 },
+      { name: 'Karolinska Institutet',role: 'research', city: 'Stockholm, Sweden', lat: 59.3293, lng: 18.0686 },
+      { name: 'Pompeu Fabra / Clinic Barcelona',role: 'research', city: 'Barcelona, Spain', lat: 41.3851, lng: 2.1734 },
+      { name: 'Amsterdam UMC',role: 'research', city: 'Amsterdam, The Netherlands', lat: 52.3339, lng: 4.8559 },
+      { name: 'Imricor Medical Systems', role: 'vendor', city: 'Burnsville, MN, USA', lat: 44.7677, lng: -93.2777},
+      { name: 'Cook Medical', role: 'vendor', city: 'Bloomington, IN, USA', lat: 40.4788, lng: -88.9927 },
+      { name: 'Siemens Healthineers', role: 'vendor', city: 'Oakville, Canada', lat: 43.487904 ,lng:-79.674949},
+      { name: 'Adas3D', role: 'vendor', city: 'Barcelona, Spain', lat: 41.390499, lng: 2.163728},
+
+    ];
+
+    var polylines = [];
+    collabs.forEach(function (c) {
+      // Marker
+      L.marker([c.lat, c.lng], { icon: collabIcon })
+        .addTo(map)
+        .bindPopup('<div class="collab-popup"><strong>' + c.name + '</strong><span>' + c.city + '</span></div>');
+
+      // Curved connection line to collaborator
+      var dlat = c.lat - home.lat;
+      var dlng = c.lng - home.lng;
+      var dist = Math.sqrt(dlat * dlat + dlng * dlng);
+      var mid = [(home.lat + c.lat) / 2, (home.lng + c.lng) / 2];
+      var offset = dist * 0.15;
+      mid[0] += offset * 0.5;
+      mid[1] -= offset * 0.3;
+
+      var curve = [
+        [home.lat, home.lng],
+        mid,
+        [c.lat, c.lng],
+      ];
+      // Smooth polyline (use multiple interpolated points for a curve)
+      var pts = [];
+      for (var t = 0; t < 1; t += 0.05) {
+        var t1 = 1 - t;
+        var lat = t1 * t1 * curve[0][0] + 2 * t1 * t * curve[1][0] + t * t * curve[2][0];
+        var lng = t1 * t1 * curve[0][1] + 2 * t1 * t * curve[1][1] + t * t * curve[2][1];
+        pts.push([lat, lng]);
+      }
+      pts.push([c.lat, c.lng]);
+
+      var lineColor = c.role === 'vendor' ? '#f44336' : '#00ABFF';
+      L.polyline(pts, {
+        color: lineColor,
+        weight: 1.5,
+        opacity: 0.4,
+        dashArray: '6 4',
+      }).addTo(map);
+    });
+
+    // On mobile, centre on Calgary; on wider screens, fit all markers
+    if (window.innerWidth <= 600) {
+      map.setView([home.lat, home.lng], 3);
+    } else {
+      var allPts = [[home.lat, home.lng]].concat(collabs.map(function (c) { return [c.lat, c.lng]; }));
+      map.fitBounds(L.latLngBounds(allPts), { padding: [40, 40] });
+    }
+
+    // Add legend
+    var legend = L.control({ position: 'bottomright' });
+    legend.onAdd = function (map) {
+      var div = L.DomUtil.create('div', 'legend');
+      div.style.backgroundColor = 'white';
+      div.style.padding = '12px 16px';
+      div.style.borderRadius = 'var(--radius)';
+      div.style.border = '1px solid var(--line)';
+      div.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+      div.style.fontSize = '0.9rem';
+      div.style.fontFamily = 'var(--font)';
+      div.innerHTML = 
+        '<div style="margin-bottom: 6px;"><span style="display: inline-block; width: 16px; height: 2px; background: #00ABFF; margin-right: 8px; vertical-align: middle;"></span>Research</div>' +
+        '<div><span style="display: inline-block; width: 16px; height: 2px; background: #f44336; margin-right: 8px; vertical-align: middle;"></span>Vendor</div>';
+      return div;
+    };
+    legend.addTo(map);
+  })();
+</script>
+<script>
+  // ---- Theme system: category → header gradient + tag colours ----
+  // JSON values are used as fallback if a category is not listed here.
+  const esc = s => String(s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  // Category to color mapping
+  const categoryColors = {
+    icmr: { border: '#1e40af', bg: '#1e40af' },
+    ecg: { border: '#2563eb', bg: '#2563eb' },
+    flow: { border: '#3b82f6', bg: '#3b82f6' },
+    imaging: { border: '#60a5fa', bg: '#60a5fa' },
+    clinical: { border: '#93c5fd', bg: '#93c5fd' },
+  };
+
+  // Populated by initResearch(); used by openModal()
+  const modalData = {};
+
+  // ---- Render all cards into #research-grid ----
+  function renderCards(data) {
+    const grid = document.getElementById('research-grid');
+    grid.innerHTML = data.map(item => {
+      const statusLabel = item.status.charAt(0).toUpperCase() + item.status.slice(1);
+      const statusClass = item.status === 'recruiting' ? ' is-recruiting' : '';
+
+      return `
+        <button type="button" class="research-card" data-category="${esc(item.category)}" onclick="openModal('${esc(item.id)}')">
+          <span class="tag">${esc(item.tag)}</span>
+          <h4>${esc(item.title)}</h4>
+          <p>${esc(item.description)}</p>
+          <div class="research-card-footer">
+            <span class="meta">Lead: ${esc(item.lead)}</span>
+            <span class="research-status${statusClass}">${esc(statusLabel)}</span>
+          </div>
+        </button>`;
+    }).join('');
+  }
+
+  // ---- Bootstrap everything from JSON data ----
+  function initResearch(data) {
+    // Filter out any malformed entries missing required fields
+    const valid = data.filter(item => item.id && item.title && item.category);
+
+    // Build modalData lookup
+    valid.forEach(item => {
+      modalData[item.id] = {
+        tag:  item.tag,
+        title: item.title,
+        category: item.category,
+        body: item.modal_body || '',
+      };
+    });
+
+    renderCards(valid);
+
+    // Ensure the grid is visible now that cards exist —
+    // the IntersectionObserver may have already evaluated the empty grid
+    // (0-height) and missed it, especially on mobile.
+    document.getElementById('research-grid').classList.add('visible');
+  }
+
+  // ---- Load data ----
+  fetch('research.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => initResearch(data))
+    .catch(err => {
+      console.error('Failed to load research data:', err);
+      document.getElementById('research-grid').innerHTML =
+        '<p class="meta" style="padding:2rem 0;">Research projects could not be loaded.</p>';
+    });
+
+  // ---- Modal ----
+  function openModal(id) {
+    const d = modalData[id];
+    if (!d) return;
+
+    // Apply category color to modal header
+    const colors = categoryColors[d.category] || { border: '#ccc', bg: '#f5f5f5' };
+    const header = document.getElementById('modal-header');
+
+    if (header) {
+      header.style.borderBottomColor = colors.border;
+    }
+
+    // Set tag with category color
+    const tagContainer = document.getElementById('modal-tag');
+    tagContainer.innerHTML = `<span class="tag" style="background: ${colors.bg}; color: white;">${esc(d.tag)}</span>`;
+
+    document.getElementById('modal-title').textContent = d.title;
+    document.getElementById('modal-body').innerHTML = d.body;
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(e, force) {
+    if (force || e.target === document.getElementById('modal-overlay')) {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // ---- Filter pills (use event delegation so cards don't need to exist yet) ----
+  document.getElementById('filter-pills').addEventListener('click', e => {
+    const pill = e.target.closest('.filter-pill');
+    if (!pill) return;
+    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const f = pill.dataset.filter;
+    document.querySelectorAll('.research-card').forEach(card => {
+      card.style.display = (f === 'all' || card.dataset.category === f) ? 'flex' : 'none';
+    });
+  });
+</script>
+</body>
+</html>

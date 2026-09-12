@@ -1,0 +1,112 @@
+[
+  {
+    "id": "icmr-translational",
+    "category": "icmr",
+    "tag": "Interventional CMR",
+    "title": "iCMR Translational Research Programme",
+    "description": "A comprehensive translational programme bringing MRI-guided cardiac catheterization and intervention from bench to clinical practice.",
+    "lead": "Prof. Dr. Marco Götte",
+    "status": "active",
+    "Description": "The iCMR translational research programme encompasses the full pipeline from phantom and animal model validation to first-in-human MRI-guided cardiac catheterization. This flagship programme aims to establish SCIC as a leading centre for interventional CMR in North America.</p><h4 class=\"mt-4\">Programme Components</h4><ul><li>MRI-compatible catheter and device development</li><li>Real-time MRI pulse sequence optimization for catheter tracking</li><li>Pre-clinical validation in large animal models</li><li>Regulatory pathway development for clinical translation</li></ul>",
+    "modal_body": "<p>The iCMR translational research programme encompasses the full pipeline from phantom and animal model validation to first-in-human MRI-guided cardiac catheterization. This flagship programme aims to establish SCIC as a leading centre for interventional CMR in North America.</p><h4 class=\"mt-4\">Programme Components</h4><ul><li>MRI-compatible catheter and device development</li><li>Real-time MRI pulse sequence optimization for catheter tracking</li><li>Pre-clinical validation in large animal models</li><li>Regulatory pathway development for clinical translation</li></ul><p class='meta mt-3'>PI: Prof. Dr. Marco Götte | Status: Active</p>"
+  },
+  {
+    "id": "ablation-lesion",
+    "category": "icmr",
+    "tag": "Interventional CMR",
+    "title": "Ablation Lesion Visualization (Without Gadolinium)",
+    "description": "Developing native contrast-free MRI methods to visualize radiofrequency ablation lesions in real time during electrophysiology procedures.",
+    "lead": "Prof. Dr. Marco Götte",
+    "status": "active",
+    "Description": "Radiofrequency ablation is a cornerstone treatment for cardiac arrhythmias, but visualizing the resulting lesions in real time remains a major challenge. This project develops gadolinium-free MRI techniques — using native T1 and T2 contrast — to image ablation lesions as they form, enabling immediate assessment of procedural success.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Optimize native T1-weighted sequences for acute lesion detection</li><li>Validate lesion volume measurements against histopathology</li><li>Integrate real-time lesion imaging into iCMR workflow</li></ul>",
+    "modal_body": "<p>Radiofrequency ablation is a cornerstone treatment for cardiac arrhythmias, but visualizing the resulting lesions in real time remains a major challenge. This project develops gadolinium-free MRI techniques — using native T1 and T2 contrast — to image ablation lesions as they form, enabling immediate assessment of procedural success.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Optimize native T1-weighted sequences for acute lesion detection</li><li>Validate lesion volume measurements against histopathology</li><li>Integrate real-time lesion imaging into iCMR workflow</li></ul><p class='meta mt-3'>PI: Prof. Dr. Marco Götte | Status: Active</p>"
+  },
+  {
+    "id": "ecg-denoising",
+    "category": "ecg",
+    "tag": "ECG & Electrophysiology",
+    "title": "ECG Denoising in MRI",
+    "description": "Advanced signal processing and deep learning to recover clean ECG signals from noise-corrupted recordings inside the MRI scanner.",
+    "lead": "Junior Reitzema MSc",
+    "status": "active",
+    "Description": "Acquiring a diagnostic-quality ECG inside an MRI scanner is extremely challenging due to electromagnetic interference, gradient-induced voltages, and the magnetohydrodynamic (MHD) effect. This project develops real-time denoising algorithms that restore morphological fidelity of the ECG waveform during scanning.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Develop adaptive filtering pipeline for gradient artefact removal</li><li>Train deep learning model on paired clean/noisy ECG datasets</li><li>Validate in clinical scanning environment at 1.5T and 3T</li></ul>",
+    "modal_body": "<p>Acquiring a diagnostic-quality ECG inside an MRI scanner is extremely challenging due to electromagnetic interference, gradient-induced voltages, and the magnetohydrodynamic (MHD) effect. This project develops real-time denoising algorithms that restore morphological fidelity of the ECG waveform during scanning.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Develop adaptive filtering pipeline for gradient artefact removal</li><li>Train deep learning model on paired clean/noisy ECG datasets</li><li>Validate in clinical scanning environment at 1.5T and 3T</li></ul><p class='meta mt-3'>PI: Junior Reitzema MSc | Status: Active</p>"
+  },
+  {
+    "id": "ecgi-mri",
+    "category": "ecg",
+    "tag": "ECG & Electrophysiology",
+    "title": "ECGi and MRI Integration",
+    "description": "Combining electrocardiographic imaging (ECGi) with cardiac MRI to create fused electro-anatomical maps for arrhythmia characterization.",
+    "lead": "Junior Reitzema MSc",
+    "status": "active",
+    "Description": "Electrocardiographic imaging (ECGi) reconstructs cardiac electrical activation patterns from body-surface potential maps. By fusing these electrical maps with the detailed anatomical and tissue data from cardiac MRI, we create comprehensive electro-anatomical models — identifying arrhythmic substrates with unprecedented precision.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Develop pipeline for ECGi-MRI co-registration</li><li>Validate fused maps against invasive EP studies</li><li>Apply to patients with ventricular arrhythmias for substrate characterization</li></ul>",
+    "modal_body": "<p>Electrocardiographic imaging (ECGi) reconstructs cardiac electrical activation patterns from body-surface potential maps. By fusing these electrical maps with the detailed anatomical and tissue data from cardiac MRI, we create comprehensive electro-anatomical models — identifying arrhythmic substrates with unprecedented precision.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Develop pipeline for ECGi-MRI co-registration</li><li>Validate fused maps against invasive EP studies</li><li>Apply to patients with ventricular arrhythmias for substrate characterization</li></ul><p class='meta mt-3'>PI: Junior Reitzema MSc | Status: Active</p>"
+  },
+  {
+    "id": "4d-flow",
+    "category": "flow",
+    "tag": "Flow & Hemodynamics",
+    "title": "4D Flow MRI Programme",
+    "description": "Comprehensive aortic and cardiac hemodynamic assessment using 4D flow MRI to understand disease progression and guide intervention.",
+    "lead": "Dr. Julio Garcia Flores",
+    "status": "active",
+    "Description": "This programme uses 4D phase-contrast MRI to characterize three-dimensional blood flow patterns, wall shear stress, and energy loss in patients with aortic disease, valvular heart disease, and congenital conditions. Hemodynamic phenotypes are correlated with disease progression and clinical events.</p>",
+    "modal_body": "<p>This programme uses 4D phase-contrast MRI to characterize three-dimensional blood flow patterns, wall shear stress, and energy loss in patients with aortic disease, valvular heart disease, and congenital conditions. Hemodynamic phenotypes are correlated with disease progression and clinical events.</p><p class='meta mt-3'>PI: Dr. Julio Garcia Flores | Status: Active</p>"
+  },
+  {
+    "id": "bav-aorta",
+    "category": "flow",
+    "tag": "Flow & Hemodynamics",
+    "title": "BAV and Aorta Pathology",
+    "description": "4D flow assessment of bicuspid aortic valve hemodynamics and associated aortopathy to predict disease progression and surgical timing.",
+    "lead": "Dr. Julio Garcia Flores / Dr. Paul Fedak",
+    "status": "active",
+    "Description": "Bicuspid aortic valve (BAV) is the most common congenital heart defect, frequently associated with progressive aortic dilation. Using 4D flow MRI, this project characterizes the abnormal hemodynamic patterns — eccentric jets, elevated wall shear stress — that drive aortopathy in BAV patients.</p><h4 class=\"mt-4\">Collaboration</h4><p>Joint project with the cardiac surgery programme (Dr. Paul Fedak) — bridging imaging with surgical decision-making.</p>",
+    "modal_body": "<p>Bicuspid aortic valve (BAV) is the most common congenital heart defect, frequently associated with progressive aortic dilation. Using 4D flow MRI, this project characterizes the abnormal hemodynamic patterns — eccentric jets, elevated wall shear stress — that drive aortopathy in BAV patients.</p><h4 class=\"mt-4\">Collaboration</h4><p>Joint project with the cardiac surgery programme (Dr. Paul Fedak) — bridging imaging with surgical decision-making.</p><p class='meta mt-3'>PI: Dr. Julio Garcia Flores / Dr. Paul Fedak | Status: Active</p>"
+  },
+  {
+    "id": "5d-cine",
+    "category": "imaging",
+    "tag": "Advanced Imaging",
+    "title": "5D Cine MRI",
+    "description": "Development of 5D (3D + time + respiratory) cine imaging for comprehensive cardiac assessment in a single free-breathing acquisition.",
+    "lead": "Prof. Dr. Marco Götte",
+    "status": "active",
+    "Description": "Conventional cardiac cine MRI requires multiple breath-held 2D slice acquisitions. 5D cine imaging captures a continuous 3D volume of the beating heart over all respiratory phases, reconstructed using compressed sensing and motion-resolved techniques — eliminating breath-holds entirely.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Develop motion-resolved 5D reconstruction framework</li><li>Validate volumetric and functional measurements against standard cine</li><li>Reduce total cardiac MRI scan time by 40–60%</li></ul>",
+    "modal_body": "<p>Conventional cardiac cine MRI requires multiple breath-held 2D slice acquisitions. 5D cine imaging captures a continuous 3D volume of the beating heart over all respiratory phases, reconstructed using compressed sensing and motion-resolved techniques — eliminating breath-holds entirely.</p><h4 class=\"mt-4\">Key Aims</h4><ul><li>Develop motion-resolved 5D reconstruction framework</li><li>Validate volumetric and functional measurements against standard cine</li><li>Reduce total cardiac MRI scan time by 40–60%</li></ul><p class='meta mt-3'>PI: Prof. Dr. Marco Götte | Status: Active</p>"
+  },
+  {
+    "id": "echo-training",
+    "category": "clinical",
+    "tag": "Clinical Programme",
+    "title": "Echo Training Simulation",
+    "description": "Simulator-based training platform for new cardiac sonographers",
+    "lead": "Dr. Julio Garcia Flores",
+    "status": "active",
+    "Description": "The training of new cardiac sonographers is important. Cardiovascular flow abnormalities can be difficult to replicate and study using conventional training methods, limiting opportunities for realistic, hands-on simulation. This project developed a simulator-based training platform that combines a 3D-printed cardiac model of the chambers and valves with a digitally controlled pump to circulate a blood-mimicking fluid. The system enables realistic reproduction of physiological and pathological cardiac flow conditions for training, visualization, and experimental evaluation.</p>",
+    "modal_body": "<p>The training of new cardiac sonographers is important. Cardiovascular flow abnormalities can be difficult to replicate and study using conventional training methods, limiting opportunities for realistic, hands-on simulation. This project developed a simulator-based training platform that combines a 3D-printed cardiac model of the chambers and valves with a digitally controlled pump to circulate a blood-mimicking fluid. The system enables realistic reproduction of physiological and pathological cardiac flow conditions for training, visualization, and experimental evaluation.</p><p class='meta mt-3'>PI: Dr. Julio Garcia Flores | Status: Active</p>"
+  },
+  {
+    "id": "advocate",
+    "category": "clinical",
+    "tag": "Clinical Programme",
+    "title": "ADVOCATE",
+    "description": "Multicentre study evaluating the role of advanced CMR techniques in optimizing timing of valvular intervention.",
+    "lead": "Prof. Dr. Marco Götte",
+    "status": "recruiting",
+    "Description": "The ADVOCATE study evaluates whether advanced cardiac MRI parameters can improve the timing of surgical or transcatheter valve intervention compared to current echocardiographic criteria alone.</p><div class=\"callout mt-3\"><strong>Currently Recruiting</strong><p class=\"mt-1\">Patients with moderate-to-severe valvular heart disease being considered for intervention.</p></div>",
+    "modal_body": "<p>The ADVOCATE study evaluates whether advanced cardiac MRI parameters can improve the timing of surgical or transcatheter valve intervention compared to current echocardiographic criteria alone.</p><div class=\"callout mt-3\"><strong>Currently Recruiting</strong><p class=\"mt-1\">Patients with moderate-to-severe valvular heart disease being considered for intervention.</p></div><p class='meta mt-3'>PI: Prof. Dr. Marco Götte | Status: Active</p>"
+  },
+  {
+    "id": "contract-research",
+    "category": "clinical",
+    "tag": "Clinical Programme",
+    "title": "Contract Research Programme",
+    "description": "Industry-sponsored and investigator-initiated contract research studies leveraging SCIC's high-volume clinical CMR infrastructure.",
+    "lead": "Sandra Rivest",
+    "status": "active",
+    "Description": "SCIC's high clinical volume, standardized protocols, and experienced research team make it an attractive site for industry-sponsored and contract research. This programme manages a portfolio of multi-centre trials and investigator-initiated studies, contributing to the evidence base for cardiac MRI in clinical practice.</p>",
+    "modal_body": "<p>SCIC's high clinical volume, standardized protocols, and experienced research team make it an attractive site for industry-sponsored and contract research. This programme manages a portfolio of multi-centre trials and investigator-initiated studies, contributing to the evidence base for cardiac MRI in clinical practice.</p><p class='meta mt-3'>PI: Sandra Rivest | Status: Active</p>"
+  }
+]
