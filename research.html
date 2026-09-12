@@ -248,30 +248,11 @@
       <span class="eyebrow">Publications</span>
       <h2>Selected recent publications</h2>
     </div>
-    <div class="pub-list fade-in">
-      <div class="pub-row">
-        <div class="pub-year">2024<span>JACC:CI</span></div>
-        <div>
-          <h4>Prognostic value of ECV quantification in HCM: a multicentre registry study</h4>
-          <p class="meta">Chen L, Ahn J, Walsh T, et al. <em>JACC: Cardiovascular Imaging.</em> 2024.</p>
-        </div>
-      </div>
-      <div class="pub-row">
-        <div class="pub-year">2024<span>Circ Imaging</span></div>
-        <div>
-          <h4>Deep learning segmentation of cardiac MRI: external validation across 12 sites</h4>
-          <p class="meta">Osei P, Wei L, Chen L, et al. <em>Circulation: Cardiovascular Imaging.</em> 2024.</p>
-        </div>
-      </div>
-      <div class="pub-row">
-        <div class="pub-year">2023<span>JCMR</span></div>
-        <div>
-          <h4>4D flow MRI hemodynamic profiling in bicuspid aortic valve disease</h4>
-          <p class="meta">Ross N, Walsh T, Sinn M, et al. <em>Journal of Cardiovascular Magnetic Resonance.</em> 2023.</p>
-        </div>
-      </div>
+    <div class="pub-list fade-in" id="publications-list">
+      <!-- Publications loaded dynamically from data/publications.json -->
+       <p style="text-align: center; color: #666; padding: 2rem;">Loading publications...</p>
     </div>
-    <div class="mt-4 fade-in">
+    <div class="mt-4 fade-in" style="text-align: center;">
       <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="btn btn-outline">View All Publications on PubMed →</a>
     </div>
   </div>
@@ -529,6 +510,54 @@
       card.style.display = (f === 'all' || card.dataset.category === f) ? 'flex' : 'none';
     });
   });
+
+  // ---- Load Publications from JSON ----
+  async function loadPublications() {
+    try {
+      const response = await fetch('./data/publications.json');
+      const publications = await response.json();
+
+      const pubList = document.getElementById('publications-list');
+
+      if (!publications || publications.length === 0) {
+        pubList.innerHTML = '<p class="meta" style="padding:2rem 0;">No publications available.</p>';
+        return;
+      }
+
+      // Sort by year (newest first) and filter out unknown titles
+      publications.sort((a, b) => parseInt(b.year) - parseInt(a.year));
+
+      pubList.innerHTML = publications.map(pub => {
+        const pmidLink = pub.pmid
+          ? `<a href="https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}" target="_blank" style="color: var(--blue); text-decoration:
+none;">${pub.title}</a>`
+          : pub.title;
+
+        // Check if key author differs from first author
+        const firstAuthorLastName = pub.authors.split(' ')[0];
+        const keyAuthorLastName = pub.author.split(' ').pop();
+        const authorDisplay = firstAuthorLastName !== keyAuthorLastName
+          ? `${pub.authors} (${pub.author})`
+          : pub.authors;
+
+        return `
+          <div class="pub-row">
+            <div class="pub-year" style="display: flex; align-items: center; justify-content: center; width: 4rem;">${pub.year}</div>
+            <div>
+              <h4>${pmidLink}</h4>
+              <p class="meta">${authorDisplay} <em>${pub.journal}.</em> ${pub.year}.</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+    } catch (err) {
+      console.error('Failed to load publications:', err);
+      document.getElementById('publications-list').innerHTML =
+        '<p class="meta" style="padding:2rem 0;">Publications could not be loaded.</p>';
+    }
+  }
+
+  loadPublications();
 </script>
 </body>
 </html>

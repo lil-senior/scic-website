@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Prognostic Value of CMR-Derived Left Ventricular Filling Pressure in Broad Referral Populations.",
+    "journal": "JACC. Advances",
+    "authors": "Khan et al.",
+    "year": "2026",
+    "pmid": "41448120",
+    "doi": "10.1016/j.jacadv.2025.102507",
+    "author": "James White"
+  },
+  {
+    "title": "Patient-Specific Registration of Segmental Jeopardy and Viability: Novel Method to Guide Revascularization in Ischemic Cardiomyopathy.",
+    "journal": "JACC. Cardiovascular imaging",
+    "authors": "Abdaem et al.",
+    "year": "2026",
+    "pmid": "41528297",
+    "doi": "10.1016/j.jcmg.2025.11.009",
+    "author": "James White"
+  },
+  {
+    "title": "Real-time magnetic resonance-guided radiofrequency ablation and lesion evaluation in an magnetic resonance-compatible isolated beating pig heart platform.",
+    "journal": "Heart rhythm O2",
+    "authors": "Hopman et al.",
+    "year": "2026",
+    "pmid": "41541716",
+    "doi": "10.1016/j.hroo.2025.09.014",
+    "author": "Junior Reitzema"
+  },
+  {
+    "title": "Immune checkpoint inhibitor myocarditis: when profound troponin elevation diverges from unremarkable imaging.",
+    "journal": "ESC heart failure",
+    "authors": "Driessen et al.",
+    "year": "2026",
+    "pmid": "41711249",
+    "doi": "10.1093/eschf/xvag029",
+    "author": "Marco Gotte"
+  },
+  {
+    "title": "Interventional MRI-Guided Ablation of Left Ventricular Tachycardia.",
+    "journal": "Circulation",
+    "authors": "Hopman et al.",
+    "year": "2026",
+    "pmid": "41979450",
+    "doi": "10.1161/CIRCULATIONAHA.126.080380",
+    "author": "Marco Gotte"
+  },
+  {
+    "title": "Predictors of Long-Term Outcomes in Hypertrophic Cardiomyopathy: The NHLBI HCM Registry.",
+    "journal": "JAMA",
+    "authors": "Kramer et al.",
+    "year": "2026",
+    "pmid": "42113540",
+    "doi": "10.1001/jama.2026.5633",
+    "author": "James White"
+  },
+  {
+    "title": "Machine Learning Model Using Pre-Cancer Therapy Cardiac Magnetic Resonance Images to Predict Cancer Therapy-Related Cardiac Dysfunction.",
+    "journal": "JACC. Cardiovascular imaging",
+    "authors": "Yu et al.",
+    "year": "2026",
+    "pmid": "42212994",
+    "doi": "10.1016/j.jcmg.2026.04.007",
+    "author": "James White"
+  },
+  {
+    "title": "The Effect of Aortic Regurgitation on Left Ventricular Flow Dynamics Assessed by 4D-Flow MRI.",
+    "journal": "Annals of biomedical engineering",
+    "authors": "Abdallah et al.",
+    "year": "2026",
+    "pmid": "42228301",
+    "doi": "10.1007/s10439-026-04187-6",
+    "author": "Julio Garcia Flores"
+  },
+  {
+    "title": "Method-Dependent Variability in Late Gadolinium Enhancement Quantification Before and After Left Atrial Ablation.",
+    "journal": "Journal of cardiovascular magnetic resonance : official journal of the Society for Cardiovascular Magnetic Resonance",
+    "authors": "van Pouderoijen et al.",
+    "year": "2026",
+    "pmid": "42264304",
+    "doi": "10.1016/j.jocmr.2026.102759",
+    "author": "Marco Gotte"
+  },
+  {
+    "title": "Diffusion tensor cardiovascular magnetic resonance differentiates pediatric dilated and hypertrophic cardiomyopathies.",
+    "journal": "European journal of radiology",
+    "authors": "Ju&#xe1;rez et al.",
+    "year": "2026",
+    "pmid": "42320145",
+    "doi": "10.1016/j.ejrad.2026.113026",
+    "author": "Julio Garcia Flores"
+  },
+  {
+    "title": "Multimodality approach to the no-entry ventricle for VT ablation: first European experience of the RA-to-LV percutaneous access-a case report.",
+    "journal": "European heart journal. Case reports",
+    "authors": "Sana&#xfa; et al.",
+    "year": "2026",
+    "pmid": "42326037",
+    "doi": "10.1093/ehjcr/ytag384",
+    "author": "Julio Garcia Flores"
+  },
+  {
+    "title": "Determinants of Impaired Left Atrial Hemodynamics in Paroxysmal Atrial Fibrillation: A 4D Flow MRI Study.",
+    "journal": "Journal of imaging",
+    "authors": "Hassan et al.",
+    "year": "2026",
+    "pmid": "42346885",
+    "doi": "10.3390/jimaging12060222",
+    "author": "Julio Garcia Flores"
+  },
+  {
+    "title": "Interventional cardiac magnetic resonance-guided flutter ablation: Technical evolution and procedural insights from early clinical use.",
+    "journal": "Heart rhythm",
+    "authors": "Hopman et al.",
+    "year": "2026",
+    "pmid": "42476391",
+    "doi": "10.1016/j.hrthm.2026.07.024",
+    "author": "Marco Gotte"
+  },
+  {
+    "title": "Investigating clinical practice variations in coronary artery disease treatment using reinforcement and transfer learning.",
+    "journal": "NPJ cardiovascular health",
+    "authors": "Ghasemi et al.",
+    "year": "2026",
+    "pmid": "42477048",
+    "doi": "10.1038/s44325-026-00147-0",
+    "author": "James White"
+  },
+  {
+    "title": "Ablation lesion patterns in atrial fibrillation: A cardiac MRI comparison of different ablation strategies.",
+    "journal": "Heart rhythm O2",
+    "authors": "van Pouderoijen et al.",
+    "year": "2026",
+    "pmid": "42488165",
+    "doi": "10.1016/j.hroo.2026.03.035",
+    "author": "Marco Gotte"
+  },
+  {
+    "title": "4D flow cardiac magnetic resonance postprocessing in congenital heart disease: SCMR FLIICR workgroup recommendations.",
+    "journal": "Journal of cardiovascular magnetic resonance : official journal of the Society for Cardiovascular Magnetic Resonance",
+    "authors": "Garcia et al.",
+    "year": "2026",
+    "pmid": "42612801",
+    "doi": "10.1016/j.jocmr.2026.102789",
+    "author": "Julio Garcia Flores"
+  },
+  {
+    "title": "Hemodynamic Assessment in Bicuspid Aortic Valve Disease and Aortic Dilation: New Insights From Voxel-By-Voxel Analysis of Reverse Flow, Stasis, and Energetics.",
+    "journal": "Frontiers in bioengineering and biotechnology",
+    "authors": "Geeraert et al.",
+    "year": "2022",
+    "pmid": "35096784",
+    "doi": "10.3389/fbioe.2021.725113",
+    "author": "Hourieh Jamalidinan"
+  },
+  {
+    "title": "Bicuspid aortic valve disease is associated with abnormal wall shear stress, viscous energy loss, and pressure drop within the ascending thoracic aorta: A cross-sectional study.",
+    "journal": "Medicine",
+    "authors": "Geeraert et al.",
+    "year": "2021",
+    "pmid": "34190185",
+    "doi": "10.1097/MD.0000000000026518",
+    "author": "Hourieh Jamalidinan"
+  },
+  {
+    "title": "Four-dimensional-flow Magnetic Resonance Imaging of the Aortic Valve and Thoracic Aorta.",
+    "journal": "Radiologic clinics of North America",
+    "authors": "Jamalidinan et al.",
+    "year": "2020",
+    "pmid": "32471542",
+    "doi": "10.1016/j.rcl.2020.02.008",
+    "author": "Hourieh Jamalidinan"
+  },
+  {
+    "title": "Left Ventricular Flow Analysis in Atrial Fibrillation.",
+    "journal": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual International Conference",
+    "authors": "Kim et al.",
+    "year": "2020",
+    "pmid": "33018198",
+    "doi": "10.1109/EMBC44109.2020.9175259",
+    "author": "Hourieh Jamalidinan"
+  }
+]

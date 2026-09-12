@@ -1,0 +1,42 @@
+name: Fetch PubMed Publications
+
+on:
+  schedule:
+    # Run every Monday at 2 AM UTC
+    - cron: '0 2 * * 1'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  fetch-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Fetch publications from PubMed
+        run: node js/fetch-pubmed-publications.js
+
+      - name: Check for changes
+        id: verify
+        run: |
+          if git diff --quiet data/publications.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.verify.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/publications.json
+          git commit -m "chore: update publications from PubMed API
+          git push
