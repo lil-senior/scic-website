@@ -249,7 +249,7 @@
       <h2>Selected recent publications</h2>
     </div>
     <div class="pub-list fade-in" id="publications-list">
-      <!-- Publications loaded dynamically from data/publications.json -->
+      <!-- Publications loaded dynamically from publications.json -->
        <p style="text-align: center; color: #666; padding: 2rem;">Loading publications...</p>
     </div>
     <div class="mt-4 fade-in" style="text-align: center;">
@@ -514,7 +514,7 @@
   // ---- Load Publications from JSON ----
   async function loadPublications() {
     try {
-      const response = await fetch('./data/publications.json');
+      const response = await fetch('./publications.json');
       const publications = await response.json();
 
       const pubList = document.getElementById('publications-list');
