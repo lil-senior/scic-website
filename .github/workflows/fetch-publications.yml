@@ -2,10 +2,14 @@ name: Fetch PubMed Publications
 
 on:
   schedule:
-    # Run every Monday at 2 AM UTC
+    # Run every Monday at 2:00 AM UTC
     - cron: '0 2 * * 1'
-  # Allow manual trigger
+
+  # Allow manual trigger from GitHub Actions
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   fetch-publications:
@@ -18,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Fetch publications from PubMed
         run: node js/fetch-pubmed-publications.js
@@ -26,7 +30,7 @@ jobs:
       - name: Check for changes
         id: verify
         run: |
-          if git diff --quiet data/publications.json; then
+          if git diff --quiet -- publications.json; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -37,6 +41,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/publications.json
-          git commit -m "chore: update publications from PubMed API
+          git add -- publications.json
+          git commit -m "chore: update publications from PubMed API"
           git push
+        
+      - name: No changes
+        if: steps.verify.outputs.changed == 'false'
+        run: echo "No publication changes detected."

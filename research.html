@@ -48,6 +48,13 @@
       transform: scale(1.05);
     }
 
+    /* Mobile: scale when card is in viewport */
+    @media (hover: none) {
+      .theme-card.active {
+        transform: scale(1.05);
+      }
+    }
+
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
@@ -570,6 +577,29 @@ none;">${pub.title}</a>`
   }
 
   loadPublications();
+
+  // ---- Intersection Observer for mobile: auto-play videos & scale cards when in viewport ----
+  if (!window.matchMedia('(hover: hover)').matches) {
+    // Mobile device (no hover capability)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          const video = entry.target.querySelector('video');
+          if (video) video.play();
+        } else {
+          entry.target.classList.remove('active');
+          const video = entry.target.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.theme-card').forEach(card => observer.observe(card));
+  }
 </script>
 </body>
 </html>
