@@ -34,7 +34,8 @@ const SCIC_NAV = `
         </div>
       </li>
       <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <li><a href="news.html">News</a></li>
+      </ul>
     <button class="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -52,7 +53,8 @@ const SCIC_NAV = `
   <a href="donors.html">Donate</a>
   <a href="investors.html">Investors</a>
   <a href="contact.html">Contact</a>
-</div>
+  <a href="news.html">News</a>
+  </div>
 `;
 
 const SCIC_FOOTER = `
@@ -66,7 +68,7 @@ const SCIC_FOOTER = `
         <p class="footer-desc">Advancing cardiac imaging through innovation, excellence in clinical care, and transformative research.</p>
         <div class="footer-social mt-4">
           <a href="#" aria-label="Twitter">𝕏</a>
-          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="https://www.linkedin.com/company/stephenson-cardiac-imaging-centre/" aria-label="LinkedIn">in</a>
         </div>
       </div>
       <div>
@@ -74,6 +76,7 @@ const SCIC_FOOTER = `
         <ul>
           <li><a href="about.html#history">Our History</a></li>
           <li><a href="about.html#team">Our Team</a></li>
+          <li><a href="news.html">News</a></li>
         </ul>
       </div>
       <div>

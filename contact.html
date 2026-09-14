@@ -6,6 +6,23 @@
   <title>Contact | Stephenson Cardiac Imaging Centre</title>
   <link rel="icon" type="image/png" href="images/SCIC_Favicon.png">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <style>
+    #map {
+      height: 500px;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .contact-layout {
+        flex-direction: column !important;
+      }
+      #map {
+        height: 300px;
+        margin-top: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,7 +41,9 @@
     <div class="fade-in">
       <h2>Find us</h2>
 
-      <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem;max-width:600px;">
+      <div class="contact-layout" style="display:flex;gap:3rem;margin-top:2rem;align-items:flex-start;">
+        <div style="flex:1;">
+          <div style="display:flex;flex-direction:column;gap:1.5rem;max-width:600px;">
 
         <div style="display:flex;gap:1.25rem;align-items:flex-start;">
           <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">📍</div>
@@ -54,12 +73,28 @@
           </div>
         </div>
 
+          </div>
+        </div>
+
+        <div style="flex:1;">
+          <div id="map"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <div id="footer-holder"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+  const map = L.map('map').setView([51.063383, -114.133733], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
+  }).addTo(map);
+  L.marker([51.063383, -114.133733]).addTo(map)
+    .bindPopup('Stephenson Cardiac Imaging Centre<br>Foothills Medical Centre');
+</script>
 <script src="js/nav.js"></script>
 <script src="js/main.js"></script>
 </body>

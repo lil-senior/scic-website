@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stephenson Cardiac Imaging Centre | Advanced Cardiac MRI</title>
-  <meta name="description" content="The Stephenson Cardiac Imaging Centre (SCIC) at the University of Calgary — advancing cardiac health through world-class imaging, research, and clinical care.">
+  <meta name="description" content="The Stephenson Cardiac Imaging Centre (SCIC) at the University of Calgary, advancing cardiac health through world-class imaging, research, and clinical care.">
   <link rel="icon" type="image/png" href="images/SCIC_Favicon.png">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .grid-3 > div, .grid-3 > a {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .grid-3 > a {
+      cursor: pointer;
+    }
+    .grid-3 > div:hover, .grid-3 > a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
 
@@ -96,7 +108,7 @@
         <span>Cardiac Imaging Centre</span>
       </h1>
       <p class="fade-in">
-        Cardiac MRI performed at the intersection of the clinic, research, and patient care, right inside Calgary.
+        Cardiac MRI performed at the intersection of clinic, research, and patient care.
       </p>
       <div class="hero-actions fade-in">
         <a href="about.html" class="btn btn-primary">
@@ -115,7 +127,7 @@
           <div class="hero-stat-label">Years of service</div>
         </div>
         <div>
-          <div class="hero-stat-value">12</div>
+          <div class="hero-stat-value">10+</div>
           <div class="hero-stat-label">Active research projects</div>
         </div>
         <div>
@@ -134,7 +146,7 @@
     <div class="section-head fade-in">
       <span class="eyebrow">What we do</span>
       <h2>A centre built on three pillars</h2>
-      <p class="lead"> Clinical care, research, and education form the foundation of SCIC. Across each pillar is a shared commitment to excellence, collaboration, and improving cardiovascular care.
+      <p class="lead"> Clinical care, research, and education form the foundation of the Stephenson Cardiac Imaging Centre (SCIC). Across each pillar is a shared commitment to excellence, collaboration, and improving cardiovascular care.
 
       </p>
     </div>
@@ -143,38 +155,29 @@
       <div class="card fade-in">
         <img src="images/index/Clinical care.jpg" class="theme-card-media" alt="Clinical care" style="object-fit: cover;">
         <div class="card-body">
-          <div class="card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
           <h3>Clinical Care</h3>
           <p>Delivering comprehensive cardiovascular MRI for patients across Southern Alberta.</p>
           <!-- <a href="clinical.html" class="card-link">Clinical services →</a> -->
         </div>
       </div>
-      <div class="card fade-in" onmouseover="document.getElementById('research-video').play()" onmouseleave="const v = document.getElementById('research-video'); v.pause(); v.currentTime=0;">
+      <a href="research.html" class="card fade-in" onmouseover="document.getElementById('research-video').play()" onmouseleave="const v = document.getElementById('research-video'); v.pause(); v.currentTime=0;">
         <video id="research-video" class="theme-card-media" muted loop controlsList="nopictureinpicture" style="object-fit: cover;">
           <source src="images/research/4D Flow.mp4" type="video/mp4">
         </video>
         <div class="card-body">
-          <div class="card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
           <h3>Research</h3>
           <p>Advancing cardiovascular imaging through translational research in tissue characterization, electrophysiology, quantitative imaging, and MRI-guided intervention.</p>
-          <a href="research.html" class="card-link">Our research →</a>
+          <span class="card-link">Our research →</span>
         </div>
-      </div>
-      <div class="card fade-in">
+      </a>
+      <a href="education.html" class="card fade-in">
         <img src="images/index/Education-case reveiw.jpg" class="theme-card-media" alt="Education case review" style="object-fit: cover;">
         <div class="card-body">
-          <div class="card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
           <h3>Training &amp; Education</h3>
           <p>Training the next generation through advanced CMR fellowship, research mentorship, and multidisciplinary education.</p>
-          <a href="education.html" class="card-link">Education →</a>
+          <span class="card-link">Education →</span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>

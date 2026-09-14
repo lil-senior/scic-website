@@ -6,6 +6,15 @@
   <title>Support SCIC | Stephenson Cardiac Imaging Centre</title>
   <link rel="icon" type="image/png" href="images/SCIC_Favicon.png">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .grid-3 > div {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .grid-3 > div:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
 
@@ -50,65 +59,6 @@
   </div>
 </section>
 
-<!-- ====== GIVING LEVELS ====== -->
-<section class="section section--grey">
-  <div class="container">
-    <div class="text-center mb-6 fade-in">
-      <span class="eyebrow">Ways to Give</span>
-      <h2>Every level of giving makes a difference</h2>
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;" class="fade-in">
-      <div style="background:white;border-radius:14px;padding:2rem;border:2px solid var(--grey-mid);text-align:center;">
-        <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:#6b7280;margin-bottom:0.25rem;">Friend</div>
-        <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--blue);margin-bottom:1.25rem;">$1,000 – $4,999</div>
-        <ul style="font-size:0.88rem;color:#4a5568;text-align:left;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;padding-left:0;">
-          <li>✓ Annual newsletter and impact report</li>
-          <li>✓ Recognition in SCIC publications</li>
-          <li>✓ Invitation to annual research symposium</li>
-        </ul>
-        <a href="#donate-form" class="btn btn-outline w-full" style="justify-content:center;">Donate</a>
-      </div>
-
-      <div style="background:white;border-radius:14px;padding:2rem;border:2px solid var(--grey-mid);text-align:center;">
-        <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:#6b7280;margin-bottom:0.25rem;">Supporter</div>
-        <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--blue);margin-bottom:1.25rem;">$5,000 – $24,999</div>
-        <ul style="font-size:0.88rem;color:#4a5568;text-align:left;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;padding-left:0;">
-          <li>✓ All Friend benefits</li>
-          <li>✓ Named recognition on website</li>
-          <li>✓ Private tour of the SCIC facility</li>
-          <li>✓ Personalized impact report</li>
-        </ul>
-        <a href="#donate-form" class="btn btn-outline w-full" style="justify-content:center;">Donate</a>
-      </div>
-
-      <div style="background:var(--black);border-radius:14px;padding:2rem;border:2px solid var(--blue);text-align:center;position:relative;">
-        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:white;font-family:var(--font-display);font-weight:700;font-size:0.8rem;letter-spacing:0.1em;padding:0.35rem 1rem;border-radius:100px;text-transform:uppercase;">Most Impact</div>
-        <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:rgba(255,255,255,0.7);margin-bottom:0.25rem;">Champion</div>
-        <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--blue);margin-bottom:1.25rem;">$25,000 – $99,999</div>
-        <ul style="font-size:0.88rem;color:rgba(255,255,255,0.7);text-align:left;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;padding-left:0;">
-          <li style="color:rgba(255,255,255,0.7);">✓ All Supporter benefits</li>
-          <li style="color:rgba(255,255,255,0.7);">✓ Named award or prize at your direction</li>
-          <li style="color:rgba(255,255,255,0.7);">✓ Annual meeting with SCIC leadership</li>
-          <li style="color:rgba(255,255,255,0.7);">✓ Priority research project sponsorship</li>
-        </ul>
-        <a href="#donate-form" class="btn btn-primary w-full" style="justify-content:center;">Donate</a>
-      </div>
-
-      <div style="background:white;border-radius:14px;padding:2rem;border:2px solid var(--grey-mid);text-align:center;">
-        <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:#6b7280;margin-bottom:0.25rem;">Benefactor</div>
-        <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--blue);margin-bottom:1.25rem;">$100,000+</div>
-        <ul style="font-size:0.88rem;color:#4a5568;text-align:left;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;padding-left:0;">
-          <li>✓ All Champion benefits</li>
-          <li>✓ Named fellowship, lab, or programme</li>
-          <li>✓ Seat on SCIC Advisory Council</li>
-          <li>✓ Endowment naming opportunities</li>
-        </ul>
-        <a href="#donate-form" class="btn btn-outline w-full" style="justify-content:center;">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ====== DONATE FORM ====== -->
 <section id="donate-form" class="section">
@@ -178,15 +128,15 @@
           <label for="tax-receipt" style="font-size:0.9rem;color:#4a5568;cursor:pointer;">I would like to receive an official tax receipt from the University of Calgary</label>
         </div>
 
-        <button class="btn btn-primary w-full" style="justify-content:center;font-size:1.05rem;" onclick="alert('Thank you for your generosity! You will be directed to the University of Calgary\'s secure payment portal to complete your gift.')">
-          Proceed to Secure Payment →
+        <button class="btn btn-primary w-full" style="justify-content:center;font-size:1.05rem;" onclick="sendDonationEmail()">
+          Submit Donation Request →
         </button>
-        <p style="text-align:center;font-size:0.83rem;color:#9ca3af;margin-top:1rem;">Secured by University of Calgary Foundation · Tax receipts issued under UCalgary charitable registration</p>
+        <p style="text-align:center;font-size:0.83rem;color:#9ca3af;margin-top:1rem;">Your donation information will be sent to our development team for processing.</p>
       </div>
 
       <div class="callout mt-4">
         <strong>Interested in a major gift or planned giving?</strong>
-        <p class="mt-1" style="margin:0.5rem 0 0;">For endowment naming, legacy gifts, or to discuss a major contribution, please contact our development office at <a href="mailto:giving@scic.ca" style="color:var(--blue);">giving@scic.ca</a> or call <strong>(403) XXX-XXXX</strong>.</p>
+        <p class="mt-1" style="margin:0.5rem 0 0;">For endowment naming, legacy gifts, or to discuss a major contribution, please contact <a href='mailto:Carrie.Smart@albertahealthservices.ca' style="color: var(--blue);">Carrie Smart</a>.</p>
       </div>
     </div>
   </div>
@@ -206,6 +156,25 @@
       customInput.style.display = btn.dataset.amount === 'custom' ? 'block' : 'none';
     });
   });
+
+  function sendDonationEmail() {
+    const giftAmount = document.getElementById('gift-amount').value;
+    const designation = document.getElementById('designation').value;
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    if (!giftAmount || !designation || !firstName || !lastName || !email) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    const subject = `New Donation Request: $${giftAmount}`;
+    const body = `Donation Request Details:\n\nDonor Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nGift Amount: $${giftAmount}\nDesignation: ${designation}\n\n---\nThis email was submitted through the SCIC Donors page.`;
+
+    window.location.href = `mailto:Carrie.Smart@albertahealthservices.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
 </script>
 </body>
 </html>
