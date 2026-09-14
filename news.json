@@ -1,0 +1,39 @@
+{
+  "stories": [
+    {
+      "date": "2026-06-18",
+      "title": "Cook Medical visit",
+      "summary": "Cook Medical visited the Stephenson Cardiac Imaging Centre to talk about collaboration in the realm of interventional MRI.",
+      "image": "images/news/cook-visit.jpg",
+      "link": ""
+    },
+    {
+      "date": "2026-06-25",
+      "title": "Saying goodbye to Dr. Matthew Stewart",
+      "summary": "Matt finished his cardiovascular imaging fellowship. We would like to thank him again for all the experiences and his expertise he brought to the Centre!",
+      "image": "images/news/matt-stewart.jpg",
+      "link": ""
+    },
+    {
+      "date": "2026-09-09",
+      "title": "Saying goodbye to Dr. Zainab Althaha",
+      "summary": "Zainab has finished her cardiovascular imaging fellowship. Thank you Zainab and good luck with the future",
+      "image": "images/news/zainab.jpg",
+      "link": ""
+    },
+        {
+      "date": "2026-09-10",
+      "title": "SCIC and EP collaboration",
+      "summary": "The kick-off to a new, close collaboration between imaging (SCIC) and EP within the Foothills Medical Centre.",
+      "image": "images/news/ep-cmr.jpg",
+      "link": ""
+    },
+    {
+      "date": "2026-09-12",
+      "title": "Preparation iCMR suite",
+      "summary": "With the first devices instrumentations arriving, SCIC is prepping themselves for the first interventional procedures inside the MRI",
+      "image": "images/news/imricor.jpg",
+      "link": ""
+    }
+  ]
+}
