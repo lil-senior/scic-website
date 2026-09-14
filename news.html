@@ -13,6 +13,17 @@
       gap: 2rem;
       margin-top: 2rem;
     }
+    @media (max-width: 768px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .news-grid {
+        gap: 1rem;
+      }
+    }
     .news-card {
       border: 1px solid rgba(0, 171, 255, 0.2);
       border-radius: 12px;
