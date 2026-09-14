@@ -15,189 +15,52 @@
   <div class="page-hero-bg"></div>
   <div class="container">
     <span class="eyebrow">Contact</span>
-    <h1>Get in Touch</h1>
-    <p class="lead mt-3">Whether you're a referring physician, a prospective fellow, a researcher, or a donor — we want to hear from you.</p>
   </div>
 </section>
 
-<!-- ====== CONTACT GRID ====== -->
+<!-- ====== CONTACT INFO ====== -->
 <section class="section">
   <div class="container">
-    <div class="grid-2" style="gap:4rem;align-items:flex-start;">
+    <div class="fade-in">
+      <h2>Find us</h2>
 
-      <!-- Contact Form -->
-      <div class="fade-in">
-        <span class="eyebrow">Send a Message</span>
-        <h2>How can we help?</h2>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem;max-width:600px;">
 
-        <div style="margin-top:2rem;">
-          <div class="form-group">
-            <label class="form-label">I am a…</label>
-            <div class="form-select-wrap">
-              <select class="form-select" id="contact-type">
-                <option value="">Select your role</option>
-                <option value="physician">Referring physician / cardiologist</option>
-                <option value="patient">Patient or family member</option>
-                <option value="fellow">Prospective fellow</option>
-                <option value="researcher">Researcher / collaborator</option>
-                <option value="donor">Potential donor</option>
-                <option value="media">Media</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
-            <div class="form-group">
-              <label class="form-label">First Name</label>
-              <input type="text" class="form-input" placeholder="First name">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Last Name</label>
-              <input type="text" class="form-input" placeholder="Last name">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" placeholder="your@email.com">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Phone (optional)</label>
-            <input type="tel" class="form-input" placeholder="403-xxx-xxxx">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Subject</label>
-            <input type="text" class="form-input" placeholder="How can we help?">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Tell us more..." style="min-height:140px;"></textarea>
-          </div>
-
-          <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="handleContactSubmit()">
-            Send Message →
-          </button>
-
-          <div id="contact-success" style="display:none;background:rgba(16,185,129,0.1);border:1px solid #10b981;border-radius:8px;padding:1.25rem;margin-top:1rem;color:#065f46;">
-            <strong>Message sent!</strong> We'll get back to you within 2 business days.
+        <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+          <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">📍</div>
+          <div>
+            <strong style="display:block;margin-bottom:0.25rem;">Location</strong>
+            <p style="margin:0;font-size:0.95rem;">Stephenson Cardiac Imaging Centre<br>Special Service Building<br>Foothills Medical Centre<br>1403 29 Street NW<br>Calgary, Alberta T2N 2T9</p>
           </div>
         </div>
-      </div>
 
-      <!-- Contact Info -->
-      <div class="fade-in">
-        <span class="eyebrow">Contact Information</span>
-        <h2>Find us</h2>
-
-        <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem;">
-
-          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
-            <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">📍</div>
-            <div>
-              <strong style="display:block;margin-bottom:0.25rem;">Location</strong>
-              <p style="margin:0;font-size:0.95rem;">Stephenson Cardiac Imaging Centre<br>Special Service Building<br>Foothills Medical Centre<br>1403 29 Street NW<br>Calgary, Alberta T2N 2T9</p>
-            </div>
+        <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+          <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">✉️</div>
+          <div>
+            <strong style="display:block;margin-bottom:0.25rem;">Email</strong>
+            <p style="margin:0;font-size:0.95rem;">
+              <a href="mailto:stephensoncentre@ucalgary.ca" style="color:var(--blue);">stephensoncentre@ucalgary.ca</a>
+            </p>
           </div>
+        </div>
 
-          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
-            <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">📞</div>
-            <div>
-              <strong style="display:block;margin-bottom:0.25rem;">Phone</strong>
-              <p style="margin:0;font-size:0.95rem;">
-                General enquiries: <a href="tel:+14031234567" style="color:var(--blue);">(403) 123-4567</a><br>
-                Referral / scheduling: <a href="tel:+14031234568" style="color:var(--blue);">(403) 123-4568</a><br>
-                Fax: (403) 123-4569
-              </p>
-            </div>
+        <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+          <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">🕐</div>
+          <div>
+            <strong style="display:block;margin-bottom:0.25rem;">Hours</strong>
+            <p style="margin:0;font-size:0.95rem;">
+              Monday - Friday: 7:30 AM - 5:30 PM<br>
+            </p>
           </div>
-
-          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
-            <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">✉️</div>
-            <div>
-              <strong style="display:block;margin-bottom:0.25rem;">Email</strong>
-              <p style="margin:0;font-size:0.95rem;">
-                General: <a href="mailto:info@scic.ca" style="color:var(--blue);">stephensoncentre@ucalgary.ca</a><br>
-              </p>
-            </div>
-          </div>
-
-          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
-            <div style="width:48px;height:48px;border-radius:10px;background:rgba(0,171,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.25rem;flex-shrink:0;">🕐</div>
-            <div>
-              <strong style="display:block;margin-bottom:0.25rem;">Hours</strong>
-              <p style="margin:0;font-size:0.95rem;">
-                Monday - Friday: 7:30 AM - 5:30 PM<br>
-                Saturday: 8:00 AM - 12:00 PM (select scan slots)<br>
-              </p>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </div>
   </div>
 </section>
-
-<!-- ====== MAP ====== -->
-<section style="padding:0;">
-  <div style="background:var(--black);height:300px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(0,171,255,0.08) 0%, transparent 70%);"></div>
-    <div style="text-align:center;position:relative;z-index:1;">
-      <div style="font-size:3rem;margin-bottom:1rem;">📍</div>
-      <h4 style="color:white;margin-bottom:0.5rem;">Stephenson Cardiac Imaging Centre</h4>
-      <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;">1403 29 Street NW, Calgary, Alberta</p>
-      <a href="https://maps.google.com/?q=Stephenson+Cardiac+Imaging+Centre" target="_blank" class="btn btn-outline mt-3" style="padding:0.6rem 1.25rem;font-size:0.9rem;">Open in Google Maps →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ====== FAQ ======
-<section class="section section--grey">
-  <div class="container">
-    <div class="fade-in mb-4">
-      <span class="eyebrow">FAQ</span>
-      <h2>Common questions</h2>
-    </div>
-    <div style="max-width:720px;" class="fade-in">
-      <div class="accordion-group">
-        <div class="accordion-item">
-          <div class="accordion-header"><h4>How do I refer a patient for cardiac MRI?</h4><span class="accordion-icon">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner"><p>Use our <a href="clinical.html#referral" style="color:var(--blue);">interactive referral tool</a> to generate a tailored protocol request, or fax a referral to (403) 123-4569. For urgent cases, call (403) 123-4568 directly.</p></div></div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header"><h4>How long does a cardiac MRI take?</h4><span class="accordion-icon">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner"><p>Most standard cardiac MRI examinations take 45–75 minutes. Stress perfusion studies may take up to 90 minutes. Patients should arrive 20 minutes early for screening and preparation.</p></div></div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header"><h4>Are patients with pacemakers or ICDs eligible?</h4><span class="accordion-icon">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner"><p>Patients with MR-conditional devices can typically undergo cardiac MRI with appropriate device programming. Patients with non-conditional devices require case-by-case risk-benefit assessment. Please contact us before referring these patients.</p></div></div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header"><h4>How quickly will the report be available?</h4><span class="accordion-icon">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner"><p>Routine reports are available within 48 hours of the scan. For urgent cases, we can provide a preliminary verbal report within hours. All reports are sent electronically to the referring physician.</p></div></div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header"><h4>How do I apply for the fellowship?</h4><span class="accordion-icon">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner"><p>Visit our <a href="fellowship.html#apply" style="color:var(--blue);">Fellowship page</a> for full details on eligibility, requirements, and the application form. Applications for the July 2026 cohort close January 31, 2026.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <div id="footer-holder"></div>
 <script src="js/nav.js"></script>
 <script src="js/main.js"></script>
-<script>
-  function handleContactSubmit() {
-    document.getElementById('contact-success').style.display = 'block';
-    window.scrollTo({ top: document.getElementById('contact-success').offsetTop - 100, behavior: 'smooth' });
-  }
-</script>
 </body>
 </html>

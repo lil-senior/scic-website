@@ -40,6 +40,14 @@
       content: 'Image / GIF / Video';
     }
 
+    /* Theme card hover scale */
+    .theme-card {
+      transition: transform 0.3s ease;
+    }
+    .theme-card:hover {
+      transform: scale(1.05);
+    }
+
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
@@ -165,37 +173,41 @@
   <div class="container">
     <div class="grid-3 fade-in">
       <div class="theme-card">
-        <div class="theme-card-media"></div>
+        <img src="images/research/3D-adas.jpg" class="theme-card-media" alt="3D LGE through ADAS3D" style="object-fit: cover;">
         <h4>3D Tissue Characterization</h4>
         <p>
-          Using Adas3D ad tissue characterizaiton.</p>
+          Show how advanced tissue characterization supports arrhythmia substrate assessment, procedural planning, and intervention.</p>
       </div>
-      <div class="theme-card">
-        <div class="theme-card-media"></div>
+      <div class="theme-card" onmouseover="document.getElementById('flow-video').play()" onmouseleave="const v = document.getElementById('flow-video'); v.pause(); v.currentTime=0;">
+        <video id="flow-video" class="theme-card-media" muted loop controlsList="nopictureinpicture">
+          <source src="images/research/4D Flow.mp4" type="video/mp4">
+        </video>
         <h4>4D Flow</h4>
         <p> Using 4D phase-contrast MRI to characterize blood flow, wall shear stress, and energy loss in patients with aortic disease, valvular heart disease, and congenital conditions.</p>
       </div>
       <div class="theme-card">
-        <div class="theme-card-media"></div>
+        <img src="images/research/5d cine.jpg" class="theme-card-media" alt="5D Cine" style="object-fit: cover;">
         <h4>5D Cine</h4>
         <p>5D cine imaging captures a continuous 3D volume of the beating heart over all respiratory phases,
           reconstructed using compressed sensing and motion-resolved techniques while eliminating breath-holds entirely.</p>
       </div>
-      <div class="theme-card">
-        <div class="theme-card-media"></div>
-        <h4>In-Bore ECG</h4>
+      <div class="theme-card" onmouseover="document.getElementById('ecg-video').play()" onmouseleave="const v = document.getElementById('ecg-video'); v.pause(); v.currentTime=0;">
+        <video id = 'ecg-video' class="theme-card-media" muted loop controlsList="nopictureinpicture">
+          <source src ="images/research/Digital twin.mp4" type="video/mp4">
+        </video>
+        <h4>ECG-MRI Integratation</h4>
         <p>Acquiring electrophysiological data inside the MRI while minimizing magnetohydrodynamic effects and eliminating gradient induced voltages. </p>
       </div>
       <div class="theme-card theme-card--accent">
-        <div class="theme-card-media"></div>
+        <img src="images/research/iCMR.jpg" class="theme-card-media" alt="iCMR" style="object-fit: cover;">
         <h4>Interventional CMR (iCMR)</h4>
         <p>MRI-guided catheter procedures, ablation lesion visualization, and a full translational research programme bringing iCMR from bench to bedside.</p>
         <a href="icmr.html" class="card-link">Learn more about iCMR &rarr;</a>
       </div>
       <div class="theme-card">
-        <div class="theme-card-media"></div>
+        <img src="images/research/QP.jpg" class="theme-card-media" alt="Quantitative perfusion" style="object-fit: cover;">
         <h4>Quantitative Perfusion</h4>
-        <p>Using cardiovascular MRI to visualize perfusion defects and characterize microvascular functioning.</p>
+        <p>Advancing quantitative assessment of myocardial blood flow and perfusion reserve with CMR.</p>
       </div>
     </div>
   </div>

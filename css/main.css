@@ -546,7 +546,8 @@ p { font-size: 1rem; color: var(--ink-2); line-height: 1.7; }
   transition: var(--transition);
   border: 1px solid var(--line);
 }
-.card:hover { border-color: var(--blue); }
+.card:hover { border-color: var(--blue); transform: scale(1.05); }
+.card .theme-card-media { width: 100%; height: 200px; margin: 0; border: none; margin-bottom: 0; }
 .card-body { padding: 1.75rem; }
 .card-icon {
   width: 40px;
