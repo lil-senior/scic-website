@@ -91,12 +91,12 @@
     "id": "advocate",
     "category": "clinical",
     "tag": "Clinical Programme",
-    "title": "ADVOCATE",
+    "title": "Quantitative Perfusion",
     "description": "Multicentre study evaluating the role of advanced CMR techniques in optimizing timing of valvular intervention.",
     "lead": "Prof. Dr. Marco Götte",
-    "status": "recruiting",
-    "Description": "The ADVOCATE study evaluates whether advanced cardiac MRI parameters can improve the timing of surgical or transcatheter valve intervention compared to current echocardiographic criteria alone.</p><div class=\"callout mt-3\"><strong>Currently Recruiting</strong><p class=\"mt-1\">Patients with moderate-to-severe valvular heart disease being considered for intervention.</p></div>",
-    "modal_body": "<p>The ADVOCATE study evaluates whether advanced cardiac MRI parameters can improve the timing of surgical or transcatheter valve intervention compared to current echocardiographic criteria alone.</p><div class=\"callout mt-3\"><strong>Currently Recruiting</strong><p class=\"mt-1\">Patients with moderate-to-severe valvular heart disease being considered for intervention.</p></div><p class='meta mt-3'>PI: Prof. Dr. Marco Götte | Status: Active</p>"
+    "status": "active",
+    "Description": "The ADVOCATE study evaluates whether advanced cardiac MRI parameters can improve the timing of surgical or transcatheter valve intervention compared to current echocardiographic criteria alone.</p>",
+    "modal_body": "<p>The ADVOCATE study evaluates whether advanced cardiac MRI parameters can improve the timing of surgical or transcatheter valve intervention compared to current echocardiographic criteria alone.</p><p class='meta mt-3'>PI: Prof. Dr. Marco Götte | Status: Active</p>"
   },
   {
     "id": "contract-research",

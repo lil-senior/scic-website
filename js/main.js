@@ -33,10 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileClose = document.querySelector('.mobile-close');
   if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
-    if (mobileClose) mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      hamburger.style.display = 'none';
+    });
+    if (mobileClose) mobileClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.style.display = 'flex';
+    });
     mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+      a.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.style.display = 'flex';
+      });
     });
   }
 

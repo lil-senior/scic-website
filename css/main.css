@@ -985,7 +985,7 @@ p { font-size: 1rem; color: var(--ink-2); line-height: 1.7; }
   right: 0;
   bottom: 0;
   background: rgba(10,14,20,0.98);
-  z-index: 999;
+  z-index: 1001;
   display: flex;
   flex-direction: column;
   align-items: center;

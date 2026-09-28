@@ -25,7 +25,8 @@ const SCIC_NAV = `
         </div>
       </li>
       <li><a href="education.html">Education</a></li>
-      <li><a href="patients.html">For Patients</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="core-lab.html">Core Lab</a></li>
       <li class="dropdown">
         <button>Support ▾</button>
         <div class="dropdown-menu">
@@ -33,6 +34,7 @@ const SCIC_NAV = `
           <a href="investors.html">Investors & Partners</a>
         </div>
       </li>
+      <li><a href="patients.html">For Patients</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="news.html">News</a></li>
       </ul>
@@ -49,6 +51,8 @@ const SCIC_NAV = `
   <a href="research.html">Research</a>
   <a href="icmr.html">iCMR</a>
   <a href="education.html">Education</a>
+  <a href="courses.html">Courses</a>
+  <a href="core-lab.html">Core Lab</a>
   <a href="patients.html">For Patients</a>
   <a href="donors.html">Donate</a>
   <a href="investors.html">Investors</a>
