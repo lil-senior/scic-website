@@ -651,7 +651,7 @@ p { font-size: 1rem; color: var(--ink-2); line-height: 1.7; }
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  background: var(--surface) !important;   /* !important defeats the per-person inline gradients until pass 2 strips them */
+  background: var(--surface);
   margin: 0 auto 1rem;
   display: flex;
   align-items: center;
@@ -660,7 +660,8 @@ p { font-size: 1rem; color: var(--ink-2); line-height: 1.7; }
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: var(--ink-3);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   border: 1px solid var(--line);
   overflow: hidden;
 }
