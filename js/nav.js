@@ -105,6 +105,11 @@ const SCIC_FOOTER = `
         </div>
       </div>
     </div>
+    <div class="footer-partner-logos">
+      <img src="images/AHS_logo.png" alt="Alberta Health Services">
+      <img src="images/Libin_logo.png" alt="Libin Institute">
+      <img src="images/UC_logo.png" alt="University of Calgary">
+    </div>
     <div class="footer-bottom">
       <span>&copy; 2025 Stephenson Cardiac Imaging Centre. All rights reserved.</span>
       <span>Affiliated with University of Calgary & Alberta Health Services</span>
