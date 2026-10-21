@@ -1,6 +1,13 @@
 {
   "stories": [
     {
+      "date": "2026-10-18",
+      "title": "Hourieh at CCC",
+      "summary": "During last Canadian Cardiology Conference, Hourieh Jamalidinan presented a poster titled 'Deep Learning-Based 4D Flow MRI Processing for Hemodynamics in Bicuspid Aortic Valve: Native-Resolution Versus Super-Resolution'.",
+      "image": "images/news/hourieh_ccc.jpg",
+      "link": ""
+    },
+    {
       "date": "2026-06-18",
       "title": "Cook Medical visit",
       "summary": "Cook Medical recently visited the Stephenson Cardiac Imaging Centre to explore potential opportunities for collaboration in the field of interventional MRI.",
