@@ -1,23 +1,5 @@
 [
   {
-    "title": "Prognostic Value of CMR-Derived Left Ventricular Filling Pressure in Broad Referral Populations.",
-    "journal": "JACC. Advances",
-    "authors": "Khan et al.",
-    "year": "2026",
-    "pmid": "41448120",
-    "doi": "10.1016/j.jacadv.2025.102507",
-    "author": "James White"
-  },
-  {
-    "title": "Interventional MRI-Guided Ablation of Left Ventricular Tachycardia.",
-    "journal": "Circulation",
-    "authors": "Hopman et al.",
-    "year": "2026",
-    "pmid": "41979450",
-    "doi": "10.1161/CIRCULATIONAHA.126.080380",
-    "author": "Marco Gotte"
-  },
-  {
     "title": "Machine Learning Model Using Pre-Cancer Therapy Cardiac Magnetic Resonance Images to Predict Cancer Therapy-Related Cardiac Dysfunction.",
     "journal": "JACC. Cardiovascular imaging",
     "authors": "Yu et al.",
@@ -27,30 +9,12 @@
     "author": "James White"
   },
   {
-    "title": "Method-Dependent Variability in Late Gadolinium Enhancement Quantification Before and After Left Atrial Ablation.",
-    "journal": "Journal of cardiovascular magnetic resonance : official journal of the Society for Cardiovascular Magnetic Resonance",
-    "authors": "van Pouderoijen et al.",
-    "year": "2026",
-    "pmid": "42264304",
-    "doi": "10.1016/j.jocmr.2026.102759",
-    "author": "Marco Gotte"
-  },
-  {
     "title": "Diffusion tensor cardiovascular magnetic resonance differentiates pediatric dilated and hypertrophic cardiomyopathies.",
     "journal": "European journal of radiology",
     "authors": "Ju&#xe1;rez et al.",
     "year": "2026",
     "pmid": "42320145",
     "doi": "10.1016/j.ejrad.2026.113026",
-    "author": "Julio Garcia Flores"
-  },
-  {
-    "title": "Multimodality approach to the no-entry ventricle for VT ablation: first European experience of the RA-to-LV percutaneous access-a case report.",
-    "journal": "European heart journal. Case reports",
-    "authors": "Sana&#xfa; et al.",
-    "year": "2026",
-    "pmid": "42326037",
-    "doi": "10.1093/ehjcr/ytag384",
     "author": "Julio Garcia Flores"
   },
   {
