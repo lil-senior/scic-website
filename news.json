@@ -51,10 +51,18 @@
     },
     {
       "date": "2026-11-04",
+      "title": "Advancing the Future of Interventional Cardiology with MRI",
+      "summary": "We are excited to share that SCIC has been awarded the 2026 Michael and Terry Wilson Catalyst Grant from the Libin Cardiovascular Institute.",
+      "image": "images/news/grant_iCMR.png",
+      "link": "https://news.ucalgary.ca/news/researchers-building-world-class-research-program-mri-based-navigation-interventional-cardiology"
+    },
+    {
+      "date": "2026-11-04",
       "title":"Welcome back, Dr. Ashan Khan!",
       "summary": "We are delighted to welcome Dr. Ahsan Khan back to Calgary as a Staff Cardiologist and CMR reader with Alberta Health Services! Dr. Khan just delivered an insightful Cardiology Grand Rounds presentation titled “Beyond the Ejection Fraction: CMR Scar and Mapping for Clinically Actionable Risk.” ",
       "image": "images/news/ashan_grant_rounds.jpg",
       "link": ""
     }
+
   ]
 }
