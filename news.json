@@ -1,6 +1,13 @@
 {
   "stories": [
     {
+      "date": "2026-11-18",
+      "title": "Looking for our next CMR fellows",
+      "summary": "The Stephenson Cardiac Imaging Centre (SCIC) at the University of Calgary offers a one-year advanced CMR fellowship, with high-volume clinical exposure, hands-on scanner experience, dedicated mentorship, and opportunities for meaningful research.",
+      "image": "images/Education/Marco-Zainab.jpg",
+      "link": "https://www.linkedin.com/posts/cardiacmri-cmr-cardiacimaging-ugcPost-7528411641403686914-VvfH"
+    },    
+    {
       "date": "2026-10-18",
       "title": "Hourieh at CCC",
       "summary": "During last Canadian Cardiology Conference, Hourieh Jamalidinan presented a poster titled 'Deep Learning-Based 4D Flow MRI Processing for Hemodynamics in Bicuspid Aortic Valve: Native-Resolution Versus Super-Resolution'.",
