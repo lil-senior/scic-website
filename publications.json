@@ -1,12 +1,21 @@
 [
   {
-    "title": "Machine Learning Model Using Pre-Cancer Therapy Cardiac Magnetic Resonance Images to Predict Cancer Therapy-Related Cardiac Dysfunction.",
-    "journal": "JACC. Cardiovascular imaging",
-    "authors": "Yu et al.",
+    "title": "Interventional MRI-Guided Ablation of Left Ventricular Tachycardia.",
+    "journal": "Circulation",
+    "authors": "Hopman et al.",
     "year": "2026",
-    "pmid": "42212994",
-    "doi": "10.1016/j.jcmg.2026.04.007",
-    "author": "James White"
+    "pmid": "41979450",
+    "doi": "10.1161/CIRCULATIONAHA.126.080380",
+    "author": "Marco Gotte"
+  },
+  {
+    "title": "Method-Dependent Variability in Late Gadolinium Enhancement Quantification Before and After Left Atrial Ablation.",
+    "journal": "Journal of cardiovascular magnetic resonance : official journal of the Society for Cardiovascular Magnetic Resonance",
+    "authors": "van Pouderoijen et al.",
+    "year": "2026",
+    "pmid": "42264304",
+    "doi": "10.1016/j.jocmr.2026.102759",
+    "author": "Marco Gotte"
   },
   {
     "title": "Diffusion tensor cardiovascular magnetic resonance differentiates pediatric dilated and hypertrophic cardiomyopathies.",
@@ -15,6 +24,24 @@
     "year": "2026",
     "pmid": "42320145",
     "doi": "10.1016/j.ejrad.2026.113026",
+    "author": "Julio Garcia Flores"
+  },
+  {
+    "title": "Multimodality approach to the no-entry ventricle for VT ablation: first European experience of the RA-to-LV percutaneous access-a case report.",
+    "journal": "European heart journal. Case reports",
+    "authors": "Sana&#xfa; et al.",
+    "year": "2026",
+    "pmid": "42326037",
+    "doi": "10.1093/ehjcr/ytag384",
+    "author": "Julio Garcia Flores"
+  },
+  {
+    "title": "Determinants of Impaired Left Atrial Hemodynamics in Paroxysmal Atrial Fibrillation: A 4D Flow MRI Study.",
+    "journal": "Journal of imaging",
+    "authors": "Hassan et al.",
+    "year": "2026",
+    "pmid": "42346885",
+    "doi": "10.3390/jimaging12060222",
     "author": "Julio Garcia Flores"
   },
   {
@@ -52,6 +79,15 @@
     "pmid": "42744272",
     "doi": "10.1016/j.hrthm.2026.09.010",
     "author": "Marco Gotte"
+  },
+  {
+    "title": "Implementation Feasibility and Clinical Utility of Phenomapping in Dilated and Hypokinetic Non-dilated Non-ischemic Cardiomyopathy.",
+    "journal": "European heart journal. Cardiovascular Imaging",
+    "authors": "Wang et al.",
+    "year": "2026",
+    "pmid": "43056220",
+    "doi": "10.1093/ehjci/jeag329",
+    "author": "James White"
   },
   {
     "title": "Hemodynamic Assessment in Bicuspid Aortic Valve Disease and Aortic Dilation: New Insights From Voxel-By-Voxel Analysis of Reverse Flow, Stasis, and Energetics.",
