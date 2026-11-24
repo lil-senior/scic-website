@@ -1,46 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Core Lab | Stephenson Cardiac Imaging Centre</title>
-  <meta name="description" content="SCIC Core Lab - Coming Soon">
-  <link rel="icon" type="image/png" href="images/SCIC_Favicon.png">
-  <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Core Lab | Stephenson Cardiac Imaging Centre</title>
+
+<link rel="icon" type="image/png" href="images/SCIC_Favicon.png">
+<link rel="stylesheet" href="css/main.css">
+
+<style>
+
+/* Page-specific styles only */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.25rem;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.25rem;
+}
+
+.workflow{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1rem;
+}
+
+.workflow-step{
+    text-align:center;
+    padding:2rem;
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+}
+
+.workflow-step-number{
+    width:48px;
+    height:48px;
+    margin:0 auto 1rem;
+    background:var(--blue);
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+.icon-card{
+    text-align:center;
+    padding:2rem;
+}
+
+.icon-card svg{
+    width:48px;
+    height:48px;
+    margin-bottom:1rem;
+    color:var(--blue);
+}
+
+.service-card{
+    height:100%;
+}
+
+.stats-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1rem;
+}
+
+.stat-card{
+    text-align:center;
+    padding:2rem;
+    border-radius:var(--radius);
+    background:var(--white);
+}
+
+.stat-card h3{
+    color:var(--blue);
+    margin-bottom:.25rem;
+    font-size:2rem;
+}
+
+.cta-panel{
+    text-align:center;
+    padding:4rem;
+    background:linear-gradient(
+        135deg,
+        #00ABFF,
+        #005a99
+    );
+    color:white;
+    border-radius:var(--radius);
+}
+
+@media(max-width:900px){
+
+.service-grid,
+.feature-grid,
+.workflow,
+.stats-row{
+    grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.service-grid,
+.feature-grid,
+.workflow,
+.stats-row{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- Navigation -->
 <div id="nav-holder"></div>
 
-<!-- ====== PAGE HERO ====== -->
+<!-- HERO -->
+
 <section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="container">
-    <h1>Core Lab</h1>
-    <p class="lead">Coming soon - TEST</p>
-  </div>
-</section>
+    <div class="page-hero-bg"></div>
 
-<!-- ====== CONTENT ====== -->
-<section class="section">
-  <div class="container" style="max-width: 640px;">
-    <div class="fade-in">
-      <p style="font-size: 1.1rem; line-height: 1.8; color: var(--ink-2); margin-bottom: 2rem;">
-        We're working on something new. Check back soon for updates on the SCIC Core Lab.
-      </p>
-      <a href="index.html" class="btn btn-primary">Back to Home</a>
+    <div class="container">
+
+        <span class="eyebrow">Core Laboratory Services</span>
+
+        <h1>
+            Independent Cardiac Imaging Analysis
+            for Clinical Research
+        </h1>
+
+        <p class="lead">
+            Delivering high-quality imaging analysis,
+            quantitative assessment, study oversight,
+            and expert adjudication for multicentre
+            clinical trials and translational research.
+        </p>
+
     </div>
-  </div>
 </section>
 
-<!-- Footer -->
+<!-- OVERVIEW -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-head fade-in">
+            <span class="eyebrow">About</span>
+            <h2>Stephenson Core Lab</h2>
+        </div>
+
+        <p class="lead fade-in">
+            The Stephenson Cardiac Imaging Centre Core Lab
+            provides centralized image analysis, blinded
+            review, imaging endpoint assessment, and
+            quantitative reporting for clinical studies,
+            investigator-initiated research, and industry-sponsored trials.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section section--grey">
+
+<div class="container">
+
+<div class="section-head fade-in">
+    <span class="eyebrow">Services</span>
+    <h2>Comprehensive Core Lab Support</h2>
+</div>
+
+<div class="service-grid fade-in">
+
+<div class="research-card service-card">
+    <span class="tag">Imaging Analysis</span>
+    <h4>Centralized Image Review</h4>
+    <p>
+        Blinded quantitative and qualitative review using
+        standardized protocols across study sites.
+    </p>
+</div>
+
+<div class="research-card service-card">
+    <span class="tag">Endpoints</span>
+    <h4>Core Lab Adjudication</h4>
+    <p>
+        Independent assessment of predefined imaging
+        endpoints and outcome measures.
+    </p>
+</div>
+
+<div class="research-card service-card">
+    <span class="tag">Study Setup</span>
+    <h4>Protocol Development</h4>
+    <p>
+        Imaging protocol design, site qualification,
+        and acquisition standardization.
+    </p>
+</div>
+
+<div class="research-card service-card">
+    <span class="tag">Quality</span>
+    <h4>QA & Monitoring</h4>
+    <p>
+        Ongoing quality control and image compliance tracking.
+    </p>
+</div>
+
+<div class="research-card service-card">
+    <span class="tag">Data</span>
+    <h4>Quantitative Reporting</h4>
+    <p>
+        Structured databases, endpoint reports,
+        and statistical-ready outputs.
+    </p>
+</div>
+
+<div class="research-card service-card">
+    <span class="tag">Consulting</span>
+    <h4>Scientific Collaboration</h4>
+    <p>
+        Expert imaging consultation from study design
+        through publication.
+    </p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MODALITIES -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-head fade-in">
+    <span class="eyebrow">Expertise</span>
+    <h2>Supported Imaging Modalities</h2>
+</div>
+
+<div class="feature-grid fade-in">
+
+<div class="icon-card">
+    <h4>Cardiac MRI</h4>
+    <p>
+        Function, tissue characterization,
+        perfusion, flow, strain, scar analysis.
+    </p>
+</div>
+
+<div class="icon-card">
+    <h4>Cardiac CT</h4>
+    <p>
+        Structural heart assessment,
+        coronary imaging, intervention planning.
+    </p>
+</div>
+
+<div class="icon-card">
+    <h4>Echocardiography</h4>
+    <p>
+        2D, 3D, strain imaging,
+        valvular assessment.
+    </p>
+</div>
+
+<div class="icon-card">
+    <h4>Multimodality</h4>
+    <p>
+        Integrated imaging endpoints
+        across complex studies.
+    </p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY US -->
+
+<section class="section section--dark">
+
+<div class="container">
+
+<div class="section-head fade-in">
+    <span class="eyebrow">Why SCIC</span>
+    <h2>Built Around Advanced Cardiac Imaging</h2>
+</div>
+
+<div class="stats-row fade-in">
+
+<div class="stat-card">
+    <h3>15+</h3>
+    <p>Years of imaging research</p>
+</div>
+
+<div class="stat-card">
+    <h3>1000s</h3>
+    <p>Studies analyzed</p>
+</div>
+
+<div class="stat-card">
+    <h3>4D</h3>
+    <p>Flow & advanced MR expertise</p>
+</div>
+
+<div class="stat-card">
+    <h3>Global</h3>
+    <p>Research collaborations</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WORKFLOW -->
+
+<section class="section section--grey">
+
+<div class="container">
+
+<div class="section-head fade-in">
+    <span class="eyebrow">Workflow</span>
+    <h2>How We Support Your Study</h2>
+</div>
+
+<div class="workflow fade-in">
+
+<div class="workflow-step">
+    <div class="workflow-step-number">1</div>
+    <h4>Study Setup</h4>
+    <p>Protocol design and site onboarding.</p>
+</div>
+
+<div class="workflow-step">
+    <div class="workflow-step-number">2</div>
+    <h4>Image Transfer</h4>
+    <p>Secure centralized data collection.</p>
+</div>
+
+<div class="workflow-step">
+    <div class="workflow-step-number">3</div>
+    <h4>Analysis</h4>
+    <p>Expert blinded image interpretation.</p>
+</div>
+
+<div class="workflow-step">
+    <div class="workflow-step-number">4</div>
+    <h4>Reporting</h4>
+    <p>Quantitative endpoints and final datasets.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="cta-panel fade-in">
+
+<span class="eyebrow">Partner With Us</span>
+
+<h2>
+Interested in Core Lab Support
+for Your Clinical Study?
+</h2>
+
+<p>
+Our team can help design imaging endpoints,
+standardize acquisition protocols,
+and provide independent quantitative analysis
+for single-centre and multicentre studies.
+</p>
+
+<br>
+
+<a href="contact.html" class="btn btn-white">
+Contact the Core Lab
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 <div id="footer-holder"></div>
 
 <script src="js/nav.js"></script>
 <script src="js/main.js"></script>
+
 <script data-goatcounter="https://scic-website.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
