@@ -66,6 +66,23 @@
 .service-card{
     height:100%;
 }
+    
+.service-card ul{
+ list-style: disc;
+ padding-left: 1.25rem;
+ margin-top: 1rem;
+}
+
+.service-card li{
+ margin-bottom: 0.6rem;
+ color: var(--ink-2);
+ line-height: 1.5;
+ display: list-item;
+}
+
+.service-card li::marker{
+ color: var(--blue);
+}
 
 .stats-row{
     display:grid;
@@ -238,7 +255,7 @@
 
         <h4>Core Imaging Services</h4>
 
-        <ul style="list-style-type: circle;">
+        <ul>
             <li>Centralized image review</li>
             <li>Quantitative image analysis</li>
             <li>Independent imaging review</li>
@@ -360,11 +377,11 @@
 
 <div class="container">
 
-<div class="section-head fade-in" style="text-align:center;">
+<div class="section-head fade-in">
 
- <span class="eyebrow" style="color:white;">Why SCIC</span>
+ <span class="eyebrow">Why SCIC</span>
 
- <h2 style="color:white;">Built Around Advanced Cardiac Imaging</h2>
+<h2 style="color:white;">Built Around Advanced Cardiac Imaging</h2>
 
 </div>
 
