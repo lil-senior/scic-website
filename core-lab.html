@@ -9,35 +9,8 @@
 <link rel="stylesheet" href="css/main.css">
 
 <style>
-
-/* Page-specific styles only */
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1.25rem;
-}
-
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1.25rem;
-}
-
-.workflow{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1rem;
-}
-
-.workflow-step{
-    text-align:center;
-    padding:2rem;
-    background:var(--white);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow-sm);
-}
-
+/* Page-only: numbered workflow badge (no shared equivalent in main.css).
+   Layout, cards, lists, stats and CTA all use the shared components. */
 .workflow-step-number{
     width:48px;
     height:48px;
@@ -50,174 +23,6 @@
     justify-content:center;
     font-weight:700;
 }
-
-.icon-card{
-    text-align:center;
-    padding:2rem;
-}
-
-.icon-card svg{
-    width:48px;
-    height:48px;
-    margin-bottom:1rem;
-    color:var(--blue);
-}
-
-.service-card{
-    height:100%;
-}
-    
-.service-card ul{
- list-style: disc;
- padding-left: 1.25rem;
- margin-top: 1rem;
-}
-
-.service-card li{
- margin-bottom: 0.6rem;
- color: var(--ink-2);
- line-height: 1.5;
- display: list-item;
-}
-
-.service-card li::marker{
- color: var(--blue);
-}
-
-.stats-row{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1rem;
-}
-
-.stat-card{
- text-align:center;
- padding:2rem;
- border-radius:var(--radius);
- background:var(--white);
- color:var(--ink);
-}
-
-.stat-card h3{
- color:var(--blue);
- margin-bottom:.25rem;
- font-size:2rem;
-}
-
-.stat-card p{
- color:var(--ink);
-}
-    
-.corelab-overview{
-    display:flex;
-    gap:3rem;
-    align-items:flex-start;
-}
-
-.corelab-overview-text{
-    flex:0 0 40%;
-}
-
-.corelab-overview-image{
-    flex:0 0 60%;
-}
-
-.corelab-overview-image img{
-    width:100%;
-    height:auto;
-    border-radius:var(--radius);
-    display:block;
-}
-
-.corelab-overview-text .lead{
-    margin-top:0;
-}
-
-@media(max-width:900px){
-
-    .corelab-overview{
-        grid-template-columns:1fr;
-    }
-
-    .corelab-overview-image img{
-        height:300px;
-    }
-
-}
-/* WHY SCIC section */
-
-.section--dark{
- padding-top:6rem;
- padding-bottom:6rem;
-}
-
-.compliance-text{
- max-width:900px;
- margin:3rem auto 0;
- text-align:center;
-}
-
-.compliance-text p{
- color:white;
- line-height:1.8;
- margin:0;
-}
-
-.compliance-logos{
- display:flex;
- justify-content:center;
- align-items:center;
- gap:3rem;
- flex-wrap:wrap;
- margin-top:3rem;
-}
-
-.compliance-logos img{
- height:70px;
- width:auto;
- object-fit:contain;
-}
-
-.compliance-heading{
- color:white;
- text-align:center;
- margin-top:3rem;
- margin-bottom:1rem;
-}
-.cta-panel{
-    text-align:center;
-    padding:4rem;
-    background:linear-gradient(
-        135deg,
-        #00ABFF,
-        #005a99
-    );
-    color:white;
-    border-radius:var(--radius);
-}
-
-@media(max-width:900px){
-
-.service-grid,
-.feature-grid,
-.workflow,
-.stats-row{
-    grid-template-columns:1fr 1fr;
-}
-
-}
-
-@media(max-width:600px){
-
-.service-grid,
-.feature-grid,
-.workflow,
-.stats-row{
-    grid-template-columns:1fr;
-}
-
-}
-
 </style>
 </head>
 
@@ -255,9 +60,9 @@
 
     <div class="container">
 
-        <div class="corelab-overview fade-in">
+        <div class="grid-2 fade-in">
 
-            <div class="corelab-overview-text">
+            <div>
 
                 <div class="section-head">
 
@@ -277,11 +82,12 @@
 
             </div>
 
-            <div class="corelab-overview-image">
+            <div>
 
                 <img
                     src="images/core-lab-info.png"
-                    alt="SCIC Core Lab">
+                    alt="SCIC Core Lab"
+                    style="border-radius:var(--radius);">
 
             </div>
 
@@ -291,7 +97,7 @@
 
 </section>
 
-    
+
 <!-- SERVICES -->
 
 <section class="section section--grey">
@@ -303,15 +109,15 @@
     <h2>Comprehensive Core Lab Support</h2>
 </div>
 
-<div class="service-grid fade-in">
+<div class="grid-3 fade-in">
 
-    <div class="research-card service-card">
+    <div class="research-card">
 
         <span class="tag">Imaging Analysis</span>
 
         <h4>Core Imaging Services</h4>
 
-        <ul>
+        <ul class="check-list mt-2">
             <li>Centralized image review</li>
             <li>Quantitative image analysis</li>
             <li>Independent imaging review</li>
@@ -322,13 +128,13 @@
 
     </div>
 
-    <div class="research-card service-card">
+    <div class="research-card">
 
         <span class="tag">Study Operations</span>
 
         <h4>Site & Study Management</h4>
 
-        <ul>
+        <ul class="check-list mt-2">
             <li>Site qualification and onboarding</li>
             <li>Imaging protocol deployment</li>
             <li>Site training and support</li>
@@ -339,13 +145,13 @@
 
     </div>
 
-    <div class="research-card service-card">
+    <div class="research-card">
 
         <span class="tag">Quality & Compliance</span>
 
         <h4>Research Governance</h4>
 
-        <ul>
+        <ul class="check-list mt-2">
             <li>Image quality assurance</li>
             <li>DICOM de-identification</li>
             <li>ICH-GCP aligned workflows</li>
@@ -442,26 +248,26 @@
 
 </div>
 
-<div class="stats-row fade-in">
+<div class="grid-4 fade-in">
 
-    <div class="stat-card">
-        <h3>20+</h3>
-        <p>Years of imaging research</p>
+    <div class="theme-card text-center">
+        <div class="hero-stat-value">20+</div>
+        <div class="hero-stat-label">Years of imaging research</div>
     </div>
 
-    <div class="stat-card">
-        <h3>10,000+</h3>
-        <p>Studies analyzed</p>
+    <div class="theme-card text-center">
+        <div class="hero-stat-value">10,000+</div>
+        <div class="hero-stat-label">Studies analyzed</div>
     </div>
 
-    <div class="stat-card">
-        <h3>4D</h3>
-        <p>Flow &amp; advanced MR expertise</p>
+    <div class="theme-card text-center">
+        <div class="hero-stat-value">4D</div>
+        <div class="hero-stat-label">Flow &amp; advanced MR expertise</div>
     </div>
 
-    <div class="stat-card">
-        <h3>Global</h3>
-        <p>Research collaborations</p>
+    <div class="theme-card text-center">
+        <div class="hero-stat-value">Global</div>
+        <div class="hero-stat-label">Research collaborations</div>
     </div>
 
 </div>
@@ -500,12 +306,6 @@
         style="height:90px; width:auto;"
     >
 
- <!--   <img
-        src="images/security-icon.png"
-        alt="Data Security"
-        style="height:90px; width:auto;"
-    >
--->
 </div>
 
 </div>
@@ -523,27 +323,27 @@
     <h2>How We Support Your Study</h2>
 </div>
 
-<div class="workflow fade-in">
+<div class="grid-4 fade-in">
 
-<div class="workflow-step">
+<div class="panel text-center">
     <div class="workflow-step-number">1</div>
     <h4>Study Setup</h4>
     <p>Protocol design and site onboarding.</p>
 </div>
 
-<div class="workflow-step">
+<div class="panel text-center">
     <div class="workflow-step-number">2</div>
     <h4>Image Transfer</h4>
     <p>Secure centralized data collection.</p>
 </div>
 
-<div class="workflow-step">
+<div class="panel text-center">
     <div class="workflow-step-number">3</div>
     <h4>Analysis</h4>
     <p>Expert blinded image interpretation.</p>
 </div>
 
-<div class="workflow-step">
+<div class="panel text-center">
     <div class="workflow-step-number">4</div>
     <h4>Reporting</h4>
     <p>Quantitative endpoints and final datasets.</p>
@@ -557,11 +357,9 @@
 
 <!-- CTA -->
 
-<section class="section">
+<section class="cta-band">
 
-<div class="container">
-
-<div class="cta-panel fade-in">
+<div class="container text-center fade-in">
 
 <span class="eyebrow">Partner With Us</span>
 
@@ -577,13 +375,9 @@ and provide independent quantitative analysis
 for single-centre and multicentre studies.
 </p>
 
-<br>
-
 <a href="contact.html" class="btn btn-white">
 Contact the Core Lab
 </a>
-
-</div>
 
 </div>
 
