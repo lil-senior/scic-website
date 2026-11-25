@@ -107,7 +107,30 @@
 .stat-card p{
  color:var(--ink);
 }
+    
+.corelab-overview-text{
+    max-width:550px;
+}
 
+.corelab-overview-image img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:var(--radius);
+    display:block;
+}
+
+@media(max-width:900px){
+
+    .corelab-overview{
+        grid-template-columns:1fr;
+    }
+
+    .corelab-overview-image img{
+        height:300px;
+    }
+
+}
 /* WHY SCIC section */
 
 .section--dark{
@@ -220,17 +243,39 @@
     <div class="container">
 
         <div class="section-head fade-in">
+
             <span class="eyebrow">About</span>
+
             <h2>Stephenson Core Lab</h2>
+
         </div>
 
-        <p class="lead fade-in">
-            The Stephenson Cardiac Imaging Centre Core Lab
-            provides centralized image analysis, blinded
-            review, imaging endpoint assessment, and
-            quantitative reporting for clinical studies,
-            investigator-initiated research, and industry-sponsored trials.
-        </p>
+        <div class="corelab-overview fade-in">
+
+            <div class="corelab-overview-text">
+
+                <p class="lead">
+
+                    The Stephenson Cardiac Imaging Centre Core Lab
+                    provides centralized image analysis, blinded
+                    review, imaging endpoint assessment, and
+                    quantitative reporting for clinical studies,
+                    investigator-initiated research, and industry-sponsored trials.
+
+                </p>
+
+            </div>
+
+            <div class="corelab-overview-image">
+
+                <img
+                    src="images/corelab/core-lab-overview.jpg"
+                    alt="SCIC Core Lab"
+                >
+
+            </div>
+
+        </div>
 
     </div>
 
